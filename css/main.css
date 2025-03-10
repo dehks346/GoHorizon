@@ -421,6 +421,7 @@ hr{
     border-radius: 8px;
     box-shadow: none;
     transition: transform 0.3s ease-in-out;
+    color: #FFFFFF;
 }
 
 .pricing__card-btn:hover {
@@ -706,6 +707,9 @@ footer .footer__card a{
 
 }
 @media (max-width: 768px) {
+    .pricing{
+        padding-bottom: 100px;
+    }
     .carousel__item {
         font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
         font-size: 90px;
@@ -728,6 +732,9 @@ footer .footer__card a{
     }
     .pricing__text{
         width: 80%;
+    }
+    .pricing__text p {
+        width: 100%;
     }
     .features__grid {
         height: auto;
