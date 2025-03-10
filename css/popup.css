@@ -18,6 +18,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px; /* Minimal size for a modern, compact look */
+    max-width: 80vw;
     padding: 40px 20px;
     background: #fff; /* Clean, white background */
     color: #333; /* Dark text for readability */
