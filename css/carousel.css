@@ -1,0 +1,41 @@
+.carousel {
+    padding: 100px 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+}
+
+.carousel__inner {
+    display: flex;
+    animation: moveCarousel 120s infinite linear;
+    gap: 200px;
+}
+
+.carousel__item {
+    font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
+    font-size: 90px;
+    letter-spacing: 200%;
+    font-weight: bold;
+    color: transparent;  /* Make the text inside transparent */
+    -webkit-text-stroke: 1px #6b6b6b;  /* Thin outline around text */
+    padding: 0;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.carousel__item:hover {
+    transform: scale(1.2); /* Hover effect to scale the text */
+}
+
+
+@keyframes moveCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

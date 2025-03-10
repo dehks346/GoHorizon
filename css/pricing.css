@@ -1,0 +1,112 @@
+/* pricing section */
+
+.pricing{
+    height: auto;
+    max-width: 100%;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.pricing__text{
+    height: auto;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.pricing__text h3{
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    color: #ddd;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+.pricing__text h4{
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #ddd;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+.pricing__text p{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    color: #888888;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    width: 50%;
+    text-align: center;
+    
+}
+.pricing__card-container{
+    height: auto;
+    width: 100%; /* Changed to 100% to fill the available width */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center; /* Centers the items horizontally within each grid cell */
+    align-items: center; 
+}
+.pricing__card{
+    height: auto;
+    width: 400px;
+    border: 1px solid #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 30px 0 30px 30px;
+}
+.pricing__card h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+.pricing__card h1{
+    font-size: 40px;
+    font-weight: 900;
+}
+.pricing__card p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #CCCCCC;
+    margin: 0;
+    padding: 0;
+}
+.pricing__card-included{
+    color: #CCCCCC;
+    font-weight: 200;
+}
+.pricing__card h5{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pricing__card-divider{
+    height: 3px;
+    width: 90%;
+    background-color: #D9D9D9;
+}
+.pricing__card-tick{
+    color: #70FB66;
+}
+.pricing__card-btn{
+    background: linear-gradient(90deg, #C7E1FC, #0C99D3);
+    border: none;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: none;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
+.pricing__card-btn:hover{
+    transform: scale(1.05);
+}
