@@ -1,36 +1,36 @@
 const featuresData = [
     {
-        imgSrc: "/assets/images/tune.svg",
+        imgSrc: "/assets/images/tune.png",
         altText: "tune icon",
         title: "Tailored to perfection",
         description: "A website crafted to reflect your vision"
     },
     {
-        imgSrc: "/assets/images/palette.svg",
+        imgSrc: "/assets/images/palette.png",
         altText: "palette icon",
         title: "Effortless sophistication",
         description: "Striking design meets seamless functionality"
     },
     {
-        imgSrc: "/assets/images/rocket.svg",
+        imgSrc: "/assets/images/rocket.png",
         altText: "rocket icon",
         title: "Future-proof by design",
         description: "Scalable, built to grow with your brands"
     },
     {
-        imgSrc: "/assets/images/bolt.svg",
+        imgSrc: "/assets/images/bolt.png",
         altText: "bolt icon",
         title: "Speed without compromise",
         description: "Fast, efficient, and built to last"
     },
     {
-        imgSrc: "/assets/images/cog.svg",
+        imgSrc: "/assets/images/cog.png",
         altText: "cog icon",
         title: "Precision & Performance",
         description: "Expertly engineered for flawless execution"
     },
     {
-        imgSrc: "/assets/images/star.svg",
+        imgSrc: "/assets/images/star.png",
         altText: "star icon",
         title: "Excellence, redefined",
         description: "Luxury web design without unnecessary costs"
