@@ -513,6 +513,8 @@ hr{
 .contact-us__form input, textarea, .contact__btn {
     width: 100%;
     max-width: 560px;
+    background-color: #FFFFFF;
+    color: #212121;
     height: 50px;
     margin: 10px 0 20px 0;
     box-shadow: 6px 6px 0px 0px #60afff;
