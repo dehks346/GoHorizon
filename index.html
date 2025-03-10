@@ -6,9 +6,29 @@
     <title>Horizon | Web development & Design</title>
     <link rel="icon" href="assets/images/w_logo_text.png" type="image/png">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay" id="popupOverlay"></div>
+    <div class="popup" id="popupBox">
+        <h2>Grand Opening Deal – 50% Off All Packages!</h2>
+        <p>Celebrate our launch with an exclusive 50% off all packages. Offer ends soon!</p>
+        <button onclick="closePopup()">Claim Your Offer</button>
+    </div>
+    <div id="promoCarousel" class="promo-carousel">
+        <div class="carousel-content">
+            <span class="promo-text">50% Off All Packages - Limited Time Only!</span>
+            <span class="promo-text">Exclusive Offer for Our Grand Opening!</span>
+            <span class="promo-text">Don’t Miss Out – Offer Ends Soon!</span>
+            
+            <!-- Duplicate the content for seamless scrolling -->
+            <span class="promo-text">50% Off All Packages - Limited Time Only!</span>
+            <span class="promo-text">Exclusive Offer for Our Grand Opening!</span>
+            <span class="promo-text">Don’t Miss Out – Offer Ends Soon!</span>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="navbar__brand">
@@ -202,7 +222,7 @@
         <section class="pricing__card-container">
             <div class="pricing__card">
                 <h2>Core</h2>
-                <h1>£150</h1>
+                <h1 class="pricing__old-price">£150</h1>
                 <p>One time payment</p>
                 <a href="#contact"><button class="pricing__card-btn">Get started</button></a>
                 <div class="pricing__card-divider"></div>
@@ -286,5 +306,7 @@
     </footer>
     <script src="js/earth.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/popup.js" defer></script>
+    <script src="js/carousel.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Subtle dark overlay */
+    display: none;
+    z-index: 1000000001;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Popup Box */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; /* Minimal size for a modern, compact look */
+    padding: 40px 20px;
+    background: #fff; /* Clean, white background */
+    color: #333; /* Dark text for readability */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    text-align: center;
+    display: none;
+    z-index: 10000000001;
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* No border for sleekness */
+    font-family: 'Helvetica Neue', sans-serif; /* Modern, clean font */
+    animation: popupFadeIn 0.4s ease-out;
+}
+
+/* Fade-in and Popup Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes popupFadeIn {
+    0% { opacity: 0; transform: translate(-50%, -40%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Headline */
+.popup h2 {
+    font-size: 26px; /* Larger font to grab attention */
+    color: #111; /* Darker color for a premium feel */
+    font-weight: 600; /* Bold weight to emphasize the headline */
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.popup p {
+    font-size: 18px; /* Slightly larger text for emphasis */
+    color: #666; /* Lighter text for clarity */
+    margin-bottom: 30px; /* More space between text and button */
+}
+
+/* Call to Action Button */
+.popup button {
+    padding: 12px 0;
+    width: 100%; /* Full width for impact */
+    border: 1px solid #333; /* Sleek border for the button */
+    background: #333; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    font-size: 18px; /* Slightly larger text for the button */
+    font-weight: 600; /* Bold for emphasis */
+    border-radius: 25px; /* Rounded edges for a modern, sleek look */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Uppercase for modern appeal */
+}
+
+.popup button:hover {
+    background: #111; /* Slightly darker background on hover */
+    border-color: #111; /* Darker border for hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.popup button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.4); /* Soft focus effect for accessibility */
+}

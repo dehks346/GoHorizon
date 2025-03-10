@@ -1,41 +1,51 @@
-.carousel {
-    padding: 100px 0;
+/* Carousel container */
+.promo-carousel {
     width: 100%;
-    height: 200px;
+    background-color: #ff5e5e; /* Bold red to convey urgency */
+    color: #fff; /* White text for high readability */
+    text-align: center;
+    padding: 10px 0;
+    position: absolute; /* Keeps it at the top of the page */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Ensure it's always on top */
+    font-family: 'Helvetica Neue', sans-serif; /* Modern, sleek font */
     overflow: hidden;
-    background-color: #101010;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it feel elevated */
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+}
+
+/* Space below the carousel to prevent overlap with nav bar */
+body {
+    padding-top: 30px; /* Adjust based on your navbar height */
+}
+
+/* Carousel content container */
+.carousel-content {
     display: flex;
     align-items: center;
-}
-
-.carousel__inner {
-    display: flex;
-    animation: moveCarousel 120s infinite linear;
+    justify-content: flex-start;
+    white-space: nowrap;
     gap: 200px;
+    animation: scrollText 30s linear infinite; /* Adjusted animation for longer smooth scrolling */
 }
 
-.carousel__item {
-    font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
-    font-size: 90px;
-    letter-spacing: 200%;
-    font-weight: bold;
-    color: transparent;  /* Make the text inside transparent */
-    -webkit-text-stroke: 1px #6b6b6b;  /* Thin outline around text */
-    padding: 0;
-    position: relative;
-    transition: transform 0.3s ease;
+/* Promo text style */
+.promo-text {
+    font-size: 18px; /* Bold, readable text */
+    font-weight: 600;
+    padding: 0 30px; /* Add space between the messages */
 }
 
-.carousel__item:hover {
-    transform: scale(1.2); /* Hover effect to scale the text */
+/* Scroll animation for the carousel content */
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scroll by 50% of the width of the content */
 }
 
-
-@keyframes moveCarousel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .promo-text {
+        font-size: 16px; /* Slightly smaller font for mobile screens */
     }
 }
