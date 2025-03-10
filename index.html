@@ -37,237 +37,90 @@
                 <a href="/index.html"><img src="assets/images/w_logo_text.png" alt="horizon logo" class="navbar__logo"></a>
             </div>
             <ul class="navbar__links">
-                <li><a href="#home" class="hover-underline-animation">Home</a></li>
-                <li><a href="pages/about-horizon.html" class="hover-underline-animation">About</a></li>
-                <li><a href="pages/website-portfolio.html" class="hover-underline-animation">Portfolio</a></li>
-                <li><a href="#services" class="hover-underline-animation">Services</a></li>
-                <li><a href="#contact" class="hover-underline-animation">Contact</a></li>
+                <li><a href="#home" class="hover-underline-animation transition">Home</a></li>
+                <li><a href="pages/about-horizon.html" class="hover-underline-animation transition">About</a></li>
+                <li><a href="pages/website-portfolio.html" class="hover-underline-animation transition">Portfolio</a></li>
+                <li><a href="#services" class="hover-underline-animation transition">Services</a></li>
+                <li><a href="#contact" class="hover-underline-animation transition">Contact</a></li>
             </ul>
             <button class="navbar__toggle" aria-label="Toggle menu">&#9776;</button>
         </nav>
     </header>
-    <section class="home" id="home">
-        <section class="home__text flex-center">
-            <h5 class="font-size-h5">MEET <span class="text-gradient">HORIZON</span>,</h5>
-            <h1>
-                YOUR <span class="text-gradient">VISION</span>,
-                OUR <span class="text-gradient">DESIGN</span>:
+    <section class="home primary-section" id="home">
+        <section class="home__text flex-center home__section">
+            <h5 class="font-size-h5 home__title-subhead">MEET <span class="text-gradient">HORIZON</span>,</h5>
+            <span class="home__title-text">
+                YOUR <span class="text-gradient home__title-animated">VISION</span>,
+                OUR <span class="text-gradient home__title-animated">DESIGN</span>:
                 WEBSITES THAT
-                <span class="text-gradient">SHINE</span>
-            </h1>
+                <span class="text-gradient home__title-animated">SHINE</span>
+            </span>
         </section>
-        <section class="flex-center">
+        <section class="flex-center home__section">
             <img src="assets/images/earth.jpg" class="home__earth" alt="" id="earth" loading="lazy">
         </section>
     </section>
-    <section class="trusted-by__section section-padding" id="home">
+    <section class="trusted-by__section section-padding flex-column-stack primary-section" id="home">
         <div class="trusted-by__text-container flex-center">
             <h4>Trusted by businesses worldwide</h4>
         </div>
         <div class="trusted-by__logo-container">
-            <img src="assets/brand-logos/cloudflare.webp" alt="cloudflare logo" class="brand-logo" loading="lazy">
-            <img src="assets/brand-logos/google.png" alt="google logo" class="brand-logo" loading="lazy">
-            <img src="assets/brand-logos/microsoft.png" alt="meta logo" class="brand-logo" loading="lazy">
-            <img src="assets/brand-logos/paypal.png" alt="paypal logo" class="brand-logo" loading="lazy">
+            <img src="assets/brand-logos/cloudflare.webp" alt="cloudflare logo" class="brand-logo transition" loading="lazy">
+            <img src="assets/brand-logos/google.png" alt="google logo" class="brand-logo transition loading="lazy">
+            <img src="assets/brand-logos/microsoft.png" alt="meta logo" class="brand-logo transition" loading="lazy">
+            <img src="assets/brand-logos/paypal.png" alt="paypal logo" class="brand-logo transition" loading="lazy">
         </div>
     </section>
-        <section class="features__section section-padding">
+        <section class="features__section section-padding flex-column-stack primary-section">
             <div class="features__text-container">
                 <h4>Features</h4>
                 <h2>Everything you need to streamline your workflow</h2>            </div>
             <div class="features__grid">
-                <div class="features__grid-item ">
-                    <div class="features__grid-item-img-container flex-center">
-                        <img src="/assets/images/tune.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>Tailored to perfection</h5>
-                        <p>A website crafted to reflect your vision</p>
-                    </div>
-                </div>
-                <div class="features__grid-item ">
-                    <div class="features__grid-item-img-container flex-center">
-                        <img src="/assets/images/palette.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>effortless sophistication</h5>
-                        <p>Striking design meets seamless functionality</p>
-                    </div>
-                </div>
-                <div class="features__grid-item ">
-                    <div class="features__grid-item-img-container flex-center">
-                        <img src="/assets/images/rocket.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>Future-proof by design</h5>
-                        <p>Scalable, built to grow with your brands</p>
-                    </div>
-                </div>
-                <div class="features__grid-item">
-                    <div class="features__grid-item-img-container flex-center">                    
-                        <img src="/assets/images/bolt.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>Speed without compromise</h5>
-                        <p>Fast, efficient, and built to last</p>
-                    </div>
-                </div>
-                <div class="features__grid-item">
-                    <div class="features__grid-item-img-container flex-center">                    
-                        <img src="/assets/images/cog.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>Precision & Performance</h5>
-                        <p>Expertly engineered for flawless execution</p>
-                    </div>
-                </div>
-                <div class="features__grid-item">
-                    <div class="features__grid-item-img-container flex-center">
-                        <img src="/assets/images/star.svg" alt="star icon">
-                    </div>
-                    <div class="features__grid-item-text">
-                        <h5>Excellence, redefined</h5>
-                        <p>Luxury web design without unnecessary costs</p>
-                    </div>
-                </div>
+                <!-- data.js -->
             </div>
         </section>
-    <section class="portfolio__section section-padding">
+    <section class="portfolio__section section-padding primary-section">
         <header class="flex-center">
             <h4>Our work</h4>
             <h3>A showcase of our minimalist designs and creative solutions.</h3>
         </header>
         <div class="portfolio__grid">
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land.jpeg" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>Ohio roofing</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land2.png" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>Skibid cafe</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land3.jpg" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>big chungus den</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land4.jpg" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>Lazer shag</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land5.jpg" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>bin weevils cum</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
-            <div class="portfolio__grid-item">
-                <div class="portfolio__grid-item-img-container">
-                    <img src="assets/images/land6.avif" alt="example landing page" class="portfolio__grid-item-img">
-                </div>
-                <div class="portfolio__grid-item-text">
-                    <h5>joe mumma</h5>
-                    <p>Project Description Project Description Project Description Project Description </p>
-                    <a class="view-project" href="pages/website-portfolio.html">View project →</a>
-                </div>
-            </div>
+            <!-- data.js -->
         </div>
-        <div class="flex-center portfolio__view-all-container">
-            <a class="portfolio__view-all hover-underline-animation">View all projects →</a>
+        <div class="flex-center portfolio__view-all-container primary-section">
+            <a class="portfolio__view-all hover-underline-animation transition">View all projects →</a>
         </div>
     </section>
     <section class="carousel">
         <div class="carousel__inner">
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
-            <span class="carousel__item">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
+            <span class="carousel__item transition">Horizon</span>
         </div>
     </section>
-    <section class="pricing section-padding" id="services">
-        <div class="pricing__text">
+    <section class="pricing section-padding flex-column-stack primary-section" id="services">
+        <div class="pricing__text flex-column-stack">
             <h4>Pricing</h4>
             <h3>Premium, transparent pricing for high-end websites.</h3>
             <p>Our pricing is based on poop and i poop when this skbiid ohio i like this talking im making sense just filler text that looks like words</p>
         </div>
         <section class="pricing__card-container">
-            <div class="pricing__card">
-                <h2>Core</h2>
-                <h1 class="pricing__old-price">£150</h1>
-                <p>One time payment</p>
-                <a href="#contact"><button class="pricing__card-btn">Get started</button></a>
-                <div class="pricing__card-divider"></div>
-                <h5>What's included</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Responsive Design</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Fast, Lightweight, and Optimised</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Basic SEO Setup</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>     1 Round Of Revision</h5>
-            </div>
-            <div class="pricing__card">
-                <h2>Luxe</h2>
-                <h1>£300</h1>
-                <p>One time payment</p>
-                <a href="#contact"><button class="pricing__card-btn">Get started</button></a>
-                <div class="pricing__card-divider"></div>
-                <h5>What's included</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Responsive Design</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Fast, Lightweight, and Optimised</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Basic SEO Setup</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>     1 Round Of Revision</h5>
-            </div>
-            <div class="pricing__card">
-                <h2>Enterprise</h2>
-                <h1 class="pricing__card-quote">Pricing on quote</h1>
-                <p>custom payment plans</p>
-                <a href="#contact"><button class="pricing__card-btn">Get started</button></a>
-                <div class="pricing__card-divider"></div>
-                <h5>What's included</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Responsive Design</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Fast, Lightweight, and Optimised</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>      Basic SEO Setup</h5>
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span>     1 Round Of Revision</h5>
-            </div>
+            <!-- pricing.js -->
         </section>
     </section>
-    <section class="contact__section section-padding" id="contact">
+    <section class="contact__section section-padding primary-section" id="contact">
         <div class="contact-us__form-container">
             <form action="https://formspree.io/f/xvgkpbkq" method="POST" class="contact-us__form flex-center">
                 <input type="text" placeholder="Name" name="name" required>
                 <input type="text" placeholder="Company" name="company">
                 <input type="email" placeholder="Email" name="email" required>
                 <textarea name="message" id="" cols="30" rows="10" placeholder="Project details" required></textarea>
-                <button type="submit" class="contact__btn">Submit</button>
+                <button type="submit" class="contact__btn transition">Submit</button>
             </form>
         </div>
         <div class="contact-us__text">
@@ -310,5 +163,6 @@
     <script src="js/navbar.js"></script>
     <script src="js/popup.js" defer></script>
     <script src="js/carousel.js" defer></script>
+    <script src="js/data.js" defer></script>
 </body>
 </html>

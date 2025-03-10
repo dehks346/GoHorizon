@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 16px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -7,107 +12,123 @@ input, button, textarea {
     padding: 0;
     margin: 0;
 }
-html{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    font-size: 16px;
-}
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     background-color: #000000;
-
 }
-hr{
-    width: 100%;
-    height: 1px;
-    background-color: #D9D9D9;
-    border: none;
-    opacity: 0.5;
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
-
+button{
+    cursor: pointer;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+h2{
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+h4{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+h5{
+    font-size: 1rem;
+    font-weight: 300;
+}
+p{
+    font-size: 0.8rem;
+    font-weight: 200;
+}
 .flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.flex-column-stack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.primary-section{
+    padding-bottom: 200px;
+}
 .text-gradient{
     background: linear-gradient(90deg, #C7E1FC, #0C99D3);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #0C99D3; 
+    color: #0C99D3;
 }
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-}
-.hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #60afff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.transition{
+    transition: 0.3s ease-in-out;
 }
 
 
 
-/* animations */
-@keyframes home-text {
-    0%{
-        font-weight: 600;
-    }
-    50%{
-        font-weight: 900;
-    }
-    100%{
-        font-weight: 600;
-    }
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
 }
-
+.navbar__logo {
+    height: 30px;
+    width: auto;
+}
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 75px;
+}
+.navbar__links li a:hover {
+    color: #60afff;
+}
+.navbar__toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
 
 
 
 /* home styles */
 .home{
-    background-color: black;
-    color: white;
     height: calc(100vh - 100px);
     width: 100vw;
     display: flex;
-    flex: 1;
     padding: 200px 0;
 }
-.home section{
+.home__section{
     width: 50%;
     height: 100%;
     flex-direction: column;
 }
-.home h5 {
-    font-size: 1rem; /* Replace 1vw with rem */
+.home__title-subhead{
     width: 60%;
 }
-.home h1{
+.home__title-text{
     font-size: 4rem;
     font-weight: 600;
     width: 70%;
     line-height: 130%;
     z-index: 3;
 }
-.home span{   
-    font-weight: 700;
+.home__title-animated{ 
+
     animation: home-text 5s infinite;
 }
 .home__earth{
@@ -116,14 +137,48 @@ hr{
     border-radius: 50%;
 }
 
+
+
+/* trusted by section */
+.trusted-by__section{
+    height: auto;
+    max-width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), black);
+    margin-top: 2rem;
+    padding: 4rem 0;
+    text-align: center;
+    gap: 30px;
+}
+.trusted-by__text-container{
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+.trusted-by__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* Adjust spacing between logos */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 800px;
+    margin: auto;
+}
+.brand-logo{
+    height: 50px;
+    filter: brightness(0.8);
+}
+.brand-logo:hover{
+    filter: brightness(1);
+}
+
+
+
+/* features section */
 .features__section{
     background-image: url("/assets/images/feature-bg.png");
     background-position: bottom;
     background-size: cover;
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 100px 0 50px 0;
 }
 .features__text-container{
@@ -134,20 +189,7 @@ hr{
     text-align: center;
     padding: 0 0 50px 0;
 }
-.features__text-container h2{
-    font-size: 1.9rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    color: #ddd;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
-}
-.features__text-container h4{
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: #ddd;
+.features__text-container h2, h4{
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
 }
@@ -172,7 +214,6 @@ hr{
     height: 60px;
     width: 60px;
     border-radius: 8px;
-    transition: 0.3s ease-in-out;
     margin: 0;
     padding: 0;
     float: left;
@@ -191,39 +232,32 @@ hr{
     max-width: 100%;
     height: 60px;
 }
-.features__grid-item-text h5{
-    font-size: 1rem;
-    font-weight: 400;
-}
 .features__grid-item-text p{
-    font-size: 0.9rem;
-    font-weight: 300;
     color: #B0B0B0;
-    transition: 0.3s ease-in-out;
 }
 
+
+
+
+
+/* portfolio section */
 .portfolio__section {
     height: auto;
     width: 100%;
     background-color: #101010;
 }
-
 .portfolio__section header {
     height: 300px;
     flex-direction: column;
     gap: 30px;
 }
 .portfolio__section header h3{
-    font-size: 1.4rem;
-    font-weight: 400;
     letter-spacing: 0.05rem;
     color: #d9d9d9;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
 }
 .portfolio__section header h4{
-    font-size: 2rem;
-    font-weight: 800;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: #ddd;
@@ -238,16 +272,13 @@ hr{
     justify-items: center; /* Centers the items horizontally within each grid cell */
     align-items: center;   /* Centers the items vertically within each grid cell */
 }
-
 .portfolio__grid-item {
     width: 400px;
     height: 350px;
     border: 1px solid #888888;
     border-radius: 12px;
     margin-bottom: 80px;
-    transition: transform 0.5s ease-in-out;
 }
-
 .portfolio__grid-item:hover{
     transform: scale(1.05);
 }
@@ -274,42 +305,24 @@ hr{
     flex-direction: column;
     gap: 10px;
 }
-.portfolio__grid-item-text h5{
-    font-size: 20px;
-    font-weight: 600;
-    background: linear-gradient(90deg, #C7E1FC, #0C99D3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0C99D3;
-}
-.portfolio__grid-item-text p{
-    font-size: 12px;
-    font-weight: 400;
-    color: #FFFFFF;
-}
 .view-project{
     font-size: 11px;
     font-weight: 200;
     color: #888888;
-    cursor: pointer;
 }
 .portfolio__view-all-container{
     width: 100%;
     padding: 25px 0 50px 0;
 }
-.portfolio__view-all{
-    font-size: 26px;
-    font-weight: 200;
-    color: #FFFFFF;
-    transition: 0.25s ease-out;
-}
 .portfolio__view-all:hover{
     color: #60afff;
-    cursor: pointer;
 }
-/* pricing section */
 
+
+
+
+
+/* pricing section */
 .pricing{
     height: auto;
     max-width: 100%;
@@ -317,34 +330,21 @@ hr{
     background-image: url("/assets/images/pricing-bg.png");
     background-position: center;
     background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 200px;
 }
 .pricing__text{
     height: auto;
     width: 100%;
     padding: 50px 0 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 30px;
     text-align: center;
 }
-
 .pricing__text h3{
-    font-size: 1.9rem;
-    font-weight: 600;
     letter-spacing: 0.05rem;
     color: #ddd;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
 }
 .pricing__text h4{
-    font-size: 1.4rem;
-    font-weight: 800;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: #ddd;
@@ -352,9 +352,6 @@ hr{
     margin-bottom: 1rem;
 }
 .pricing__text p{
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
     color: #888888;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
@@ -381,30 +378,10 @@ hr{
     border-radius: 8px;
     padding: 30px 0 30px 30px;
 }
-.pricing__card h2{
-    font-size: 28px;
-    font-weight: 700;
-}
-.pricing__card h1{
-    font-size: 40px;
-    font-weight: 900;
-}
 .pricing__card p{
-    font-size: 12px;
-    font-weight: 400;
-    color: #CCCCCC;
     margin: 0;
     padding: 0;
 }
-.pricing__card-included{
-    color: #CCCCCC;
-    font-weight: 200;
-}
-.pricing__card h5{
-    font-size: 14px;
-    font-weight: 400;
-}
-
 .pricing__card-divider{
     height: 3px;
     width: 90%;
@@ -420,8 +397,6 @@ hr{
     height: 40px;
     border-radius: 8px;
     box-shadow: none;
-    transition: transform 0.3s ease-in-out;
-    color: #FFFFFF;
 }
 
 .pricing__card-btn:hover {
@@ -430,6 +405,17 @@ hr{
 }
 
 
+
+
+/* carousel section */
+@keyframes moveCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .carousel {
     padding: 100px 0;
     width: 100%;
@@ -439,13 +425,11 @@ hr{
     display: flex;
     align-items: center;
 }
-
 .carousel__inner {
     display: flex;
     animation: moveCarousel 120s infinite linear;
     gap: 200px;
 }
-
 .carousel__item {
     font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
     font-size: 90px;
@@ -455,24 +439,10 @@ hr{
     -webkit-text-stroke: 1px #6b6b6b;  /* Thin outline around text */
     padding: 0;
     position: relative;
-    transition: transform 0.3s ease;
 }
-
 .carousel__item:hover {
     transform: scale(1.2); /* Hover effect to scale the text */
 }
-
-
-@keyframes moveCarousel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-
 .contact__section{
     height: auto;
     max-width: 100vw;
@@ -528,119 +498,12 @@ hr{
     border-radius: 3px;
     resize:vertical;
 }
-.contact__button{
-    transition: 0.3s;
-}
-
-.trusted-by__section{
-    height: auto;
-    max-width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 4rem 0;
-    text-align: center;
-    gap: 30px;
-}
-.trusted-by__text-container{
-    font-size: 1.4rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: #ddd;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
-}
-
-
-.trusted-by__logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem; /* Adjust spacing between logos */
-    flex-wrap: wrap; /* Ensures responsiveness */
-    max-width: 800px;
-    margin: auto;
-}
-
-.brand-logo{
-    height: 50px;
-    filter: brightness(0.8);
-    transition: filter 0.3s ease;
-}
-.brand-logo:hover{
-    filter: brightness(1);
-}
 
 
 
-/* Navbar Styling */
-.navbar {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #000000;
-    color: #fff;
-}
-.navbar__logo {
-    height: 30px;
-    width: auto;
-}
-.navbar__links {
-    list-style: none;
-    display: flex;
-    gap: 75px;
-}
-.navbar__links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.25s ease-out;
-}
-.navbar__links li a:hover {
-    color: #60afff;
-}
-.navbar__toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .navbar__links {
-        position: absolute;
-        top: 100px;
-        right: 0;
-        background-color: #000000;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        z-index: 9999999;
-        padding-bottom: 10px;
-    }
-
-    .navbar__links li {
-        margin: 10px 0;
-    }
-
-    .navbar__toggle {
-        display: block;
-    }
-
-    .navbar__links.active {
-        display: flex;
-    }
-}
 
 
+/* footer section */
 footer {
     background-color: #141414;
     color: #ffffff;
@@ -651,7 +514,6 @@ footer {
     text-align: center;
     padding: 40px 0; /* Adjusted padding */
 }
-
 .footer__top-section {
     display: flex;
     justify-content: space-between;
@@ -660,7 +522,6 @@ footer {
     gap: 30px; /* Adds consistent spacing between items */
     width: 100%; /* Ensures it takes full width */
 }
-
 .footer__card {
     display: flex;
     flex-direction: column;
@@ -668,21 +529,16 @@ footer {
     width: 100%; /* Makes sure the card takes full width */
     max-width: 300px; /* Prevents the card from getting too large */
 }
-
 .footer__divider {
     height: 1px;
     background-color: #ffffff;
     margin: 25px 0;
 }
-
 .footer__card-title {
-    font-size: 16px;
     font-weight: 900;
 }
 footer .footer__card a{
-    font-weight: 200;
     color: #b0b0b0;
-    text-decoration: none;
 }
 .footer__bottom-section {
     height: auto;
@@ -707,9 +563,30 @@ footer .footer__card a{
 
 }
 @media (max-width: 768px) {
-    .pricing{
-        padding-bottom: 100px;
+    .navbar__links {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #000000;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        z-index: 9999999;
+        padding-bottom: 10px;
     }
+    .navbar__links li {
+        margin: 10px 0;
+    }
+
+    .navbar__toggle {
+        display: block;
+    }
+
+    .navbar__links.active {
+        display: flex;
+    }
+
     .carousel__item {
         font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
         font-size: 90px;
@@ -719,41 +596,10 @@ footer .footer__card a{
         -webkit-text-stroke: 1px #6b6b6b;  /* Thin outline around text */
         padding: 0;
         position: relative;
-        transition: transform 0.3s ease;
     }
-    .features__text-container{
-        font-size: 1.6rem;
-        width: 80%;
-    }
-    .portfolio__section header{
-        width: 100%;
-        text-align: center;
-        
-    }
-    .pricing__text{
-        width: 80%;
-    }
-    .pricing__text p {
-        width: 100%;
-    }
-    .features__grid {
-        height: auto;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 50px; /* Adjust to 1 column on small screens */
-    }
-    .pricing__card{
-        margin-bottom: 50px;
-        width: 80%;
-    }
+
     .homepage-title {
         font-size: 3rem; /* Adjusted size for smaller screens */
-    }
-    .contact__section {
-        flex-direction: column-reverse; /* Stack the two sides */
-    }
-    .contact-is__text, .contact-us__form-container {
-        flex: none; /* Prevent the columns from growing too wide */
-        width: 100%; /* Allow them to take up full width */
     }
     .home h1 {
         font-size: 2.5rem; /* Reduce size for mobile */
@@ -762,22 +608,19 @@ footer .footer__card a{
         font-size: 0.7rem;
         width: 68%; /* Adjust to a smaller size */
     }
-    .pricing__card h1 {
-        font-size: 2rem; /* Adjust to a smaller size */
+
+    .features__grid {
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px; /* Adjust to 1 column on small screens */
     }
-    .features__text-container h2{
+    .features__text-container{
         font-size: 1.6rem;
+        width: 80%;
+    }
+    .features__text-container h2, h4, p{
         width: 90%;
 
-    }
-    .features__text-container h4{
-        font-size: 1.3rem;
-        width: 90%;
-
-    }
-    .features__text-container p{
-        font-size: 0.8rem;
-        width: 90%;
     }
     .features__grid{
         width: 90%;
@@ -785,40 +628,71 @@ footer .footer__card a{
     .features__grid-item{
         width: 90%;
     }
+
+
+
+    .portfolio__section header{
+        width: 100%;
+        text-align: center; 
+    }
+
+
+    .pricing{
+        padding-bottom: 100px;
+    }
+    .pricing__text{
+        width: 80%;
+    }
+    .pricing__text p {
+        width: 100%;
+    }
+    .pricing__card{
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    .pricing__card h1 {
+        font-size: 2rem; /* Adjust to a smaller size */
+    }
+
+
+
+    .contact__section {
+        flex-direction: column-reverse; /* Stack the two sides */
+    }
+    .contact-is__text, .contact-us__form-container {
+        flex: none; /* Prevent the columns from growing too wide */
+        width: 100%; /* Allow them to take up full width */
+    }
     .contact-us__huge-text {
         font-size: 10vw; /* Make the huge text size even smaller on mobile */
     }
-
     .contact-us__text {
         width: 100%;
         padding: 20px;
         text-align: center;
     }
-
     .contact-us__form-container {
         width: 100%;
         padding: 20px;
     }
-
-    .contact-us__form input, 
-    .contact-us__form textarea {
+    .contact-us__form input, .contact-us__form textarea {
         max-width: 100%;
+    }
+
+
+        /* Optional: Adjust footer text size for mobile for better legibility */
+    footer {
+        font-size: 14px;
     }
     .footer__top-section {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items */
         padding: 20px; /* Reduce padding for small screens */
     }
-
     .footer__card {
         width: 100%; /* Ensure the card is full-width on mobile */
         max-width: none; /* Remove max-width restriction */
         text-align: center; /* Center the text in smaller viewports */
-    }
-
-    /* Optional: Adjust footer text size for mobile for better legibility */
-    footer {
-        font-size: 14px;
     }
 }
 
@@ -829,4 +703,41 @@ footer .footer__card a{
     }
 }
 
+
+
+
+
+/* animations */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #60afff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@keyframes home-text {
+    0%{
+        font-weight: 600;
+    }
+    50%{
+        font-weight: 700;
+    }
+    100%{
+        font-weight: 600;
+    }
+}
 
