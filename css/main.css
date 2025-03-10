@@ -706,8 +706,14 @@ footer .footer__card a{
 @media (max-width: 768px) {
     .carousel__item {
         font-family: 'Staatliches', sans-serif; /* Or any font you prefer */
-        font-size: 60px;
+        font-size: 90px;
         letter-spacing: 100%;
+        font-weight: bold;
+        color: transparent;  /* Make the text inside transparent */
+        -webkit-text-stroke: 1px #6b6b6b;  /* Thin outline around text */
+        padding: 0;
+        position: relative;
+        transition: transform 0.3s ease;
     }
     .features__text-container{
         font-size: 1.6rem;
