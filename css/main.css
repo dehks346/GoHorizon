@@ -652,7 +652,11 @@ footer .footer__card a{
     }
     .features__text-container{
         font-size: 1.6rem;
-        width: 90%;
+        width: 100%;
+    }
+    .features__grid-item-img-container{
+        height: 50px;
+        width: 50px;
     }
 
 
