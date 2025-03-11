@@ -231,6 +231,7 @@ p{
 }
 .features__grid-item img{
     height: 80%;
+    object-fit: cover;
     filter: invert(55%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(90%) contrast(77%);
 }
 .features__grid-item-text{
