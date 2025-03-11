@@ -1,36 +1,36 @@
 const featuresData = [
     {
-        imgSrc: "/assets/images/tune.png",
+        imgSrc: "assets/images/tune.png",
         altText: "tune icon",
         title: "Tailored to perfection",
         description: "A website crafted to reflect your vision"
     },
     {
-        imgSrc: "/assets/images/palette.png",
+        imgSrc: "assets/images/palette.png",
         altText: "palette icon",
         title: "Effortless sophistication",
         description: "Striking design meets seamless functionality"
     },
     {
-        imgSrc: "/assets/images/rocket.png",
+        imgSrc: "assets/images/rocket.png",
         altText: "rocket icon",
         title: "Designed to last",
         description: "Scalable, built to grow with your business"
     },
     {
-        imgSrc: "/assets/images/bolt.png",
+        imgSrc: "assets/images/bolt.png",
         altText: "bolt icon",
         title: "Speed without compromise",
         description: "Fast, efficient, and reliable"
     },
     {
-        imgSrc: "/assets/images/cog.png",
+        imgSrc: "assets/images/cog.png",
         altText: "cog icon",
         title: "Precision & Performance",
         description: "Expertly engineered for flawless deployment"
     },
     {
-        imgSrc: "/assets/images/star.png",
+        imgSrc: "assets/images/star.png",
         altText: "star icon",
         title: "Excellence, redefined",
         description: "Luxury web design without unnecessary costs"
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         featureElement.innerHTML = `
             <div class="features__grid-item-img-container flex-center transition">
-                <img src="${feature.imgSrc}" alt="${feature.altText}">
+                <img src="${feature.imgSrc}" alt="${feature.altText}" >
             </div>
             <div class="features__grid-item-text">
                 <h5>${feature.title}</h5>
