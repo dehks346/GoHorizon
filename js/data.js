@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>${card.title}</h3>
             <h2 class="pricing__old-price">${card.oldPrice}</h2>
             <p class="pricing__pricing-plan">${card.description}</p>
-            <a href="#contact"><button class="pricing__card-btn transition">Get started</button></a>
+            <a href="#contact" class="pricing__btn-a"><button class="pricing__card-btn transition">Get started</button></a>
             <div class="pricing__card-divider"></div>
             <h5>What's included</h5>
             ${card.features.map(feature => `

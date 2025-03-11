@@ -405,10 +405,12 @@ p{
     border-radius: 8px;
     box-shadow: none;
 }
-
 .pricing__card-btn:hover {
     transform: scale(1.05);
     transform-origin: center;
+}
+.pricing__btn-a{
+    color: #ffffff;
 }
 
 
