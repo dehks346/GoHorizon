@@ -606,7 +606,7 @@ footer .footer__card a{
 
     .carousel__item {
         font-size: 60px; /* Adjust font size for smaller screens */
-        letter-spacing: 100%; /* Adjust letter spacing for smaller screens */
+        letter-spacing: 80%; /* Adjust letter spacing for smaller screens */
         -webkit-text-stroke: 0.5px #6b6b6b; /* Adjust text stroke for smaller screens */
     }
 
