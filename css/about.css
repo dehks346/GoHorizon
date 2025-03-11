@@ -1,96 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
+body{
     background-color: #101010;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
+}
+main{
+    padding: 0 10% 0 10%;
 }
 .navbar{
     background-color: #101010;
+    padding-top: 30px;
 }
-h1{
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 130%;
-    background: linear-gradient(90deg, #C7E1FC, #0C99D3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0C99D3; 
-}
-p{
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 150%;
-    margin-top: 20px;
-    color: grey;
-}
-.title{
-    width: 100%;
+.about__section{
+    max-width: 100%;
     height: auto;
+}
+
+
+.title__section{
     padding: 150px 0 150px 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
-.meet-founder-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.meet-founder__section{
     flex-direction: row;
 }
-.meet-founder{
-    width: 50%;
-    height: 100%;
-    text-align: center;
-}
-.founder-image-container{
+.founder__image-container, .founder__text-container{
     width: 50%;
     height: 100%;
 }
-.founder-img{
+.founder__img{
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-.process-title{
-    margin-bottom: 70px;
-}
-.our-process{
-    width: 100%;
-    height: auto;
+
+
+
+.process__section{
     padding: 150px 0 150px 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
-.process-item{
+.process__title-container{
+    margin-bottom: 70px;
+}
+.process__item{
     width: 80%;
     height: auto;
-    display: flex;
     flex-direction: row;
     margin-bottom: 50px;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
 }
-.process-number{
+.process__item-number{
     height: 100%;
     width: auto;
-    font-size: 4rem;
     padding: 20px;
     color: #c4c4c4;
 }
-.process-desc{
+.process__item-desc{
     height: 100%;
     min-width: 500px;
     text-align: left;
@@ -98,15 +65,7 @@ p{
     border-radius: 12px;
     padding: 10px;
 }
-.process-desc h2{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff; 
-}
 .process-desc p{
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 150%;
     margin-top: 20px;
     color: grey;
 }

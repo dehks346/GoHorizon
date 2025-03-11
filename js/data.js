@@ -14,20 +14,20 @@ const featuresData = [
     {
         imgSrc: "/assets/images/rocket.png",
         altText: "rocket icon",
-        title: "Future-proof by design",
-        description: "Scalable, built to grow with your brands"
+        title: "Designed to last",
+        description: "Scalable, built to grow with your business"
     },
     {
         imgSrc: "/assets/images/bolt.png",
         altText: "bolt icon",
         title: "Speed without compromise",
-        description: "Fast, efficient, and built to last"
+        description: "Fast, efficient, and reliable"
     },
     {
         imgSrc: "/assets/images/cog.png",
         altText: "cog icon",
         title: "Precision & Performance",
-        description: "Expertly engineered for flawless execution"
+        description: "Expertly engineered for flawless deployment"
     },
     {
         imgSrc: "/assets/images/star.png",
@@ -41,45 +41,24 @@ const portfolioData = [
     {
         imgSrc: "assets/images/land.jpeg",
         altText: "example landing page",
-        title: "Ohio roofing",
-        description: "Project Description Project Description Project Description Project Description",
+        title: "Roofing example 1",
+        description: "Project Description of roofing business, Here we developed the front-end of the website for a roofing company. The website is designed to be responsive and user-friendly.",
         link: "pages/website-portfolio.html"
     },
     {
         imgSrc: "assets/images/land2.png",
-        altText: "example landing page",
-        title: "Skibid cafe",
-        description: "Project Description Project Description Project Description Project Description",
+        altText: "cafe example landing page",
+        title: "Cafe example 1",
+        description: "Project Description of cafe business, we designed and developed this in a short amount of time. The website is designed to be responsive and user-friendly.",
         link: "pages/website-portfolio.html"
     },
     {
         imgSrc: "assets/images/land3.jpg",
         altText: "example landing page",
-        title: "Big chungus den",
-        description: "Project Description Project Description Project Description Project Description",
+        title: "Lazer tag example 1",
+        description: "Project Description of lazer tag business, we designed and developed this in a short amount of time. The website is designed to be responsive and user-friendly.",
         link: "pages/website-portfolio.html"
     },
-    {
-        imgSrc: "assets/images/land4.jpg",
-        altText: "example landing page",
-        title: "Lazer shag",
-        description: "Project Description Project Description Project Description Project Description",
-        link: "pages/website-portfolio.html"
-    },
-    {
-        imgSrc: "assets/images/land5.jpg",
-        altText: "example landing page",
-        title: "Bin weevils",
-        description: "Project Description Project Description Project Description Project Description",
-        link: "pages/website-portfolio.html"
-    },
-    {
-        imgSrc: "assets/images/land6.avif",
-        altText: "example landing page",
-        title: "Joe mumma",
-        description: "Project Description Project Description Project Description Project Description",
-        link: "pages/website-portfolio.html"
-    }
 ];
 
 const pricingData = [
@@ -128,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         featureElement.classList.add("features__grid-item");
 
         featureElement.innerHTML = `
-            <div class="features__grid-item-img-container flex-center">
+            <div class="features__grid-item-img-container flex-center transition">
                 <img src="${feature.imgSrc}" alt="${feature.altText}">
             </div>
             <div class="features__grid-item-text">
@@ -150,9 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${item.imgSrc}" alt="${item.altText}" class="portfolio__grid-item-img">
             </div>
             <div class="portfolio__grid-item-text">
-                <h5 class="text-gradient">${item.title}</h5>
+                <h4 class="text-gradient">${item.title}</h4>
                 <p class="transition">${item.description}</p>
-                <a class="view-project" href="${item.link}">View project →</a>
+                <a class="view-project" href="${item.link}"><p>View project →</p></a>
             </div>
         `;
 
@@ -162,19 +141,24 @@ document.addEventListener("DOMContentLoaded", () => {
     pricingData.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("pricing__card");
-
+    
+        // Add a specific class for the "Enterprise" card
+        if (card.title === "Enterprise") {
+            cardElement.classList.add("pricing__card--enterprise");
+        }
+    
         cardElement.innerHTML = `
             <h3>${card.title}</h3>
             <h2 class="pricing__old-price">${card.oldPrice}</h2>
-            <p>${card.description}</p>
+            <p class="pricing__pricing-plan">${card.description}</p>
             <a href="#contact"><button class="pricing__card-btn transition">Get started</button></a>
             <div class="pricing__card-divider"></div>
             <h5>What's included</h5>
             ${card.features.map(feature => `
-                <h5 class="pricing__card-included"><span class="pricing__card-tick">✓</span> ${feature}</h5>
+                <p class="pricing__card-included"><span class="pricing__card-tick">✓</span> ${feature}</p>
             `).join('')}
         `;
-
+    
         pricingContainer.appendChild(cardElement);
     });
 });

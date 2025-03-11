@@ -60,7 +60,7 @@ p{
     align-items: center;
 }
 .primary-section{
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 .text-gradient{
     background: linear-gradient(90deg, #C7E1FC, #0C99D3);
@@ -80,11 +80,13 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 15px;
 }
 .navbar__logo {
     height: 30px;
     width: auto;
+    display: block;
+    margin: auto 0;
 }
 .navbar__links {
     list-style: none;
@@ -119,6 +121,7 @@ p{
 }
 .home__title-subhead{
     width: 60%;
+    font-weight: 600;
 }
 .home__title-text{
     font-size: 4rem;
@@ -128,7 +131,6 @@ p{
     z-index: 3;
 }
 .home__title-animated{ 
-
     animation: home-text 5s infinite;
 }
 .home__earth{
@@ -150,9 +152,9 @@ p{
     gap: 30px;
 }
 .trusted-by__text-container{
-    text-transform: uppercase;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+
 }
 .trusted-by__logo-container {
     display: flex;
@@ -164,8 +166,8 @@ p{
     margin: auto;
 }
 .brand-logo{
-    height: 50px;
-    filter: brightness(0.8);
+    height: 40px;
+    filter: brightness(0.6);
 }
 .brand-logo:hover{
     filter: brightness(1);
@@ -185,13 +187,14 @@ p{
     height: auto;
     width: auto;
     flex-direction: column;
-    gap: 20px;
     text-align: center;
-    padding: 0 0 50px 0;
+    padding: 0 20% 50px 20%;
 }
-.features__text-container h2, h4{
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
+.features__text-container h2{
+    margin-bottom: 2rem;
+}
+.features__text-container h5{
+    color: #cdcdcd;
 }
 .features__grid{
     padding: 0;
@@ -221,9 +224,6 @@ p{
 .features__grid-item:hover > .features__grid-item-img-container{
     box-shadow: -6px 6px 0px 0px #0C99D3;
 }
-.features__grid-item:hover > .features__grid-item-text p{
-    margin-left: 10px;
-}
 .features__grid-item img{
     height: 80%;
     filter: invert(55%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(90%) contrast(77%);
@@ -245,25 +245,18 @@ p{
     height: auto;
     width: 100%;
     background-color: #101010;
+    padding: 0 0 50px 0;
 }
 .portfolio__section header {
     height: 300px;
-    flex-direction: column;
-    gap: 30px;
 }
-.portfolio__section header h3{
-    letter-spacing: 0.05rem;
-    color: #d9d9d9;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+.portfolio__header-container{
+    text-align: center;
+    width: 70%;
+}
+.portfolio__header-container h2{
     margin-bottom: 1rem;
 }
-.portfolio__section header h4{
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: #ddd;
-    margin-bottom: 1rem;
-}
-
 .portfolio__grid {
     height: auto;
     width: 100%; /* Changed to 100% to fill the available width */
@@ -305,6 +298,18 @@ p{
     flex-direction: column;
     gap: 10px;
 }
+.portfolio__grid-item-text h4{
+    width: 100%;
+    height: 20%;
+}
+.portfolio__grid-item-text p{
+    width: 100%;
+    height: 60%;
+}
+.portfolio__grid-item-text a{
+    width: 100%;
+    height: 20%;
+}
 .view-project{
     font-size: 11px;
     font-weight: 200;
@@ -312,7 +317,7 @@ p{
 }
 .portfolio__view-all-container{
     width: 100%;
-    padding: 25px 0 50px 0;
+    padding: 25px 0 0 0;
 }
 .portfolio__view-all:hover{
     color: #60afff;
@@ -359,13 +364,15 @@ p{
     text-align: center;
     
 }
+.pricing__pricing-plan{
+    color: #bdbdbd;
+}
 .pricing__card-container{
     height: auto;
-    width: 100%; /* Changed to 100% to fill the available width */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center; /* Centers the items horizontally within each grid cell */
-    align-items: center; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally within each grid cell */
+    gap: 50px;
 }
 .pricing__card{
     height: auto;
@@ -461,7 +468,7 @@ p{
     flex: 1;
 }
 .contact-us__huge-text{
-    font-size: 8vw;
+    font-size: 7vw;
 }
 .contact-us__huge-text span{
     font-weight: 900;
@@ -473,7 +480,7 @@ p{
     flex: 1;
 }
 .contact__email{
-    font-weight: 800;
+    font-weight: 700;
 }
 .contact-us__form{
     height: 100%;
@@ -484,7 +491,7 @@ p{
 .contact-us__form input, textarea, .contact__btn {
     width: 100%;
     max-width: 560px;
-    background-color: #FFFFFF;
+    background-color: #e6e6e6;
     color: #212121;
     height: 50px;
     margin: 10px 0 20px 0;
@@ -531,11 +538,9 @@ footer {
 }
 .footer__divider {
     height: 1px;
-    background-color: #ffffff;
+    background-color: #515151;
     margin: 25px 0;
-}
-.footer__card-title {
-    font-weight: 900;
+    width: 100%;
 }
 footer .footer__card a{
     color: #b0b0b0;
@@ -560,6 +565,7 @@ footer .footer__card a{
     .portfolio__grid-item{
         width: 70%;
     }
+    
 
 }
 @media (max-width: 768px) {
@@ -608,24 +614,38 @@ footer .footer__card a{
         font-size: 0.7rem;
         width: 68%; /* Adjust to a smaller size */
     }
+    .home{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+        padding: 50px 0;
+    }
+    .home__section{
+        width: 100%;
+        height: auto;
+    }
+    .home__text{
+        order: 2;
+        text-align: center;
+    }
+    .home__earth{
+        order: 1;
+        max-width: 100%;
+        margin-top: 20px;
+    }
 
     .features__grid {
         height: auto;
+        width: 70%;
         grid-template-columns: repeat(1, 1fr);
         gap: 50px; /* Adjust to 1 column on small screens */
     }
+    .features__grid-item{
+        width: 100%;
+        height: auto;
+    }
     .features__text-container{
         font-size: 1.6rem;
-        width: 80%;
-    }
-    .features__text-container h2, h4, p{
-        width: 90%;
-
-    }
-    .features__grid{
-        width: 90%;
-    }
-    .features__grid-item{
         width: 90%;
     }
 
@@ -675,8 +695,8 @@ footer .footer__card a{
         width: 100%;
         padding: 20px;
     }
-    .contact-us__form input, .contact-us__form textarea {
-        max-width: 100%;
+    .contact-us__form input, .contact-us__form textarea, .contact__btn {
+        max-width: 90%;
     }
 
 
