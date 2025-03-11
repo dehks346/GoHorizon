@@ -645,6 +645,9 @@ footer .footer__card a{
         order: 2;
         text-align: center;
     }
+    .home__title-text{
+        font-size: 3.5rem;
+    }
     .home__earth{
         order: 1;
         max-width: 100%;

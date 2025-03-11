@@ -42,21 +42,21 @@ const portfolioData = [
         imgSrc: "assets/images/land.jpeg",
         altText: "example landing page",
         title: "Roofing example 1",
-        description: "Project Description of roofing business, Here we developed the front-end of the website for a roofing company. The website is designed to be responsive and user-friendly.",
+        description: "Project Description of roofing business, Here we developed the front-end of the website for a roofing company.",
         link: "pages/website-portfolio.html"
     },
     {
         imgSrc: "assets/images/land2.png",
         altText: "cafe example landing page",
         title: "Cafe example 1",
-        description: "Project Description of cafe business, we designed and developed this in a short amount of time. The website is designed to be responsive and user-friendly.",
+        description: "Project Description of cafe business, we designed and developed this in a short amount of time. ",
         link: "pages/website-portfolio.html"
     },
     {
         imgSrc: "assets/images/land3.jpg",
         altText: "example landing page",
         title: "Lazer tag example 1",
-        description: "Project Description of lazer tag business, we designed and developed this in a short amount of time. The website is designed to be responsive and user-friendly.",
+        description: "Project Description of lazer tag business, we designed and developed this in a short amount of time.",
         link: "pages/website-portfolio.html"
     },
 ];
