@@ -23,6 +23,11 @@ a{
     cursor: pointer;
 }
 button{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #000; /* Set background color */
+    color: #fff !important; /* Force white text */
     cursor: pointer;
 }
 h1{

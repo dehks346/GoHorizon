@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="portfolio__grid-item-text">
                 <h4 class="text-gradient">${item.title}</h4>
                 <p class="transition">${item.description}</p>
-                <a class="view-project" href="${item.link}"><p>View project →</p></a>
+                <a class="view-project" href="/pages/website-portfolio.html"><p>View project →</p></a>
             </div>
         `;
 
