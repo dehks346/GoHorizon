@@ -1,43 +1,51 @@
 body{
-    background-color: #101010;
-}
+    background: rgb(16,16,16);
+    background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgb(33, 33, 33) 100%);}
 main{
     padding: 0 10% 0 10%;
 }
+p{
+    font-size: 1.2rem;
+}
+
+
 .navbar{
     background-color: #101010;
     padding-top: 30px;
 }
-.about__section{
-    max-width: 100%;
-    height: auto;
+.navbar__links{
+    background-color: #101010;
 }
 
+.title-text{
+    font-size: 42px;
+    font-weight: bold;
+}
+.title-subtitle{
+    font-size: 18px;
+    color: #cecece;
+    line-height: 1.8;
+    margin: 20px auto;
+}
 
 .title__section{
-    padding: 150px 0 150px 0;
+    max-width: 100%;
     text-align: center;
-    flex-direction: column;
+    padding: 150px 0px 60px 0;
 }
 
 
-.meet-founder__section{
-    flex-direction: row;
+.founder__section {
+    gap: 40px;
+    text-align: center;
 }
-.founder__image-container, .founder__text-container{
-    width: 50%;
-    height: 100%;
+.founder__text p{
+    text-align: left;
 }
-.founder__img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 
 
 .process__section{
-    padding: 150px 0 150px 0;
+    padding: 100px 0 150px 0;
     text-align: center;
     flex-direction: column;
 }
@@ -48,49 +56,47 @@ main{
     width: 80%;
     height: auto;
     flex-direction: row;
-    margin-bottom: 50px;
-    gap: 30px;
+    margin-bottom: 50px;    
 }
 .process__item-number{
     height: 100%;
     width: auto;
     padding: 20px;
     color: #c4c4c4;
+    font-size: 3.3rem;
 }
 .process__item-desc{
     height: 100%;
-    min-width: 500px;
+    width: 500px;
     text-align: left;
     border: 1px solid #333;
     border-radius: 12px;
-    padding: 10px;
+    padding: 20px 10px;
 }
-.process-desc p{
+.process__item-desc p{
     margin-top: 20px;
     color: grey;
 }
 
 @media (max-width: 768px) {
-    .title{
-        padding: 100px 0 100px 0;
-    }
-    .meet-founder-container{
-        flex-direction: column;
-    }
-    .meet-founder{
+    .founder__section{
+        flex-direction: column-reverse;
         width: 100%;
     }
-    .founder-image-container{
-        width: 100%;
+    .founder__text p{
+        text-align: center;
     }
-    .process-item{
-        flex-direction: column;
-        gap: 0px;
+    .process__section{
+        padding: 50px 0 100px 0;
+        margin: 0 0 0 0;
     }
-    .process-number{
-        font-size: 2rem;
+    .process__item-desc{
+        width: 400px;
     }
-    .process-desc{
-        min-width: 300px;
+    .process__item-desc h3{
+        font-size: 1.5rem;
+    }
+    .process__item-desc p{
+        font-size: 1rem;
     }
 }

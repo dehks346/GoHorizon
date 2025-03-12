@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${item.imgSrc}" alt="${item.altText}" class="portfolio__grid-item-img">
             </div>
             <div class="portfolio__grid-item-text">
-                <h4 class="text-gradient">${item.title}</h4>
+                <h3 class="text-gradient">${item.title}</h3>
                 <p class="transition">${item.description}</p>
                 <a class="view-project" href="/pages/website-portfolio.html"><p>View project →</p></a>
             </div>
@@ -141,10 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
     pricingData.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("pricing__card");
+        cardElement.classList.add("transition");
     
         // Add a specific class for the "Enterprise" card
         if (card.title === "Enterprise") {
             cardElement.classList.add("pricing__card--enterprise");
+        }
+        if (card.title === "Luxe") {
+            cardElement.classList.add("pricing__card-luxe");
         }
     
         cardElement.innerHTML = `

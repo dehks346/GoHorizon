@@ -154,7 +154,8 @@ p{
 .trusted-by__section{
     height: auto;
     max-width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), black);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(16,16,16,1) 100%);
     margin-top: 2rem;
     padding: 4rem 0;
     text-align: center;
@@ -186,9 +187,7 @@ p{
 
 /* features section */
 .features__section{
-    background-image: url("/assets/images/feature-bg.png");
-    background-position: bottom;
-    background-size: cover;
+    background-color: #101010;
     max-width: 100%;
     padding: 100px 0 50px 0;
 }
@@ -229,6 +228,8 @@ p{
     margin: 0;
     padding: 0;
     float: left;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+
 }
 .features__grid-item:hover > .features__grid-item-img-container{
     box-shadow: -6px 6px 0px 0px #0C99D3;
@@ -254,11 +255,15 @@ p{
 .portfolio__section {
     height: auto;
     width: 100%;
-    background-color: #101010;
-    padding: 0 0 50px 0;
+    flex-direction: column;
+    background-color: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a, #121212);
+    padding-bottom: 50px;
 }
 .portfolio__section header {
-    height: 300px;
+    width: 100%;
+    height: auto;
+    padding: 25px 0 50px 0;
 }
 .portfolio__header-container{
     text-align: center;
@@ -269,18 +274,21 @@ p{
 }
 .portfolio__grid {
     height: auto;
-    width: 100%; /* Changed to 100% to fill the available width */
+    width: 80%; /* Changed to 100% to fill the available width */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center; /* Centers the items horizontally within each grid cell */
     align-items: center;   /* Centers the items vertically within each grid cell */
+    gap: 0;
+    padding-bottom: 20px;
 }
 .portfolio__grid-item {
     width: 400px;
     height: 350px;
-    border: 1px solid #888888;
-    border-radius: 12px;
-    margin-bottom: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.353);
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    margin-bottom: 30px;
 }
 .portfolio__grid-item:hover{
     transform: scale(1.05);
@@ -288,7 +296,7 @@ p{
 .portfolio__grid-item-img-container{
     height: 60%;
     max-width: 100%;
-    border-radius: 12px 12px 0 0;
+    border-radius: 16px 16px 0 0;
     overflow: hidden;
     position: relative;
     background-color: #101010;
@@ -322,8 +330,8 @@ p{
 }
 .view-project{
     font-size: 11px;
-    font-weight: 200;
-    color: #888888;
+    font-weight: 500;
+    color: #ffffff;
 }
 .portfolio__view-all-container{
     width: 100%;
@@ -332,7 +340,19 @@ p{
 .portfolio__view-all:hover{
     color: #60afff;
 }
-
+.portfolio__view-all-btn{
+    padding: 14px 28px;
+    font-weight: bold;
+    background-color: #60afff;
+    color: rgb(57, 57, 57) !important;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+.portfolio__view-all-btn:hover {
+    transform: scale(1.05);
+    transform-origin: center;
+}
 
 
 
@@ -341,11 +361,8 @@ p{
 .pricing{
     height: auto;
     max-width: 100%;
-    background-color: #101010;
-    background-image: url("/assets/images/pricing-bg.png");
-    background-position: center;
-    background-size: cover;
-}
+    background: rgb(25,25,25);
+    background: linear-gradient(135deg, #0a0a0a, #121212);}
 .pricing__text{
     height: auto;
     width: 100%;
@@ -394,6 +411,10 @@ p{
     gap: 20px;
     border-radius: 8px;
     padding: 30px 0 30px 30px;
+    animation: fadeInUp 0.6s ease-out;
+}
+.pricing__card:hover{
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
 }
 .pricing__card p{
     margin: 0;
@@ -408,7 +429,7 @@ p{
     color: #70FB66;
 }
 .pricing__card-btn {
-    background: linear-gradient(90deg, #C7E1FC, #0C99D3);
+    background: linear-gradient(90deg, #77b7d1, #0C99D3);
     border: none;
     width: 90%;
     height: 40px;
@@ -422,6 +443,24 @@ p{
 .pricing__btn-a{
     color: #ffffff;
 }
+.pricing__card-luxe{
+    position: relative;
+    border: 2px solid rgba(0, 122, 255, 0.7);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 10px 40px rgba(0, 122, 255, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
 
 
 
@@ -504,9 +543,11 @@ p{
     padding-bottom: 75px;
 }
 .contact-us__form input, textarea, .contact__btn {
+    font-size: 1rem;
+    padding-left: 5px;
     width: 100%;
     max-width: 560px;
-    background-color: #e6e6e6;
+    background-color: #f0f0f0;
     color: #212121;
     height: 50px;
     margin: 10px 0 20px 0;
@@ -516,6 +557,7 @@ p{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contact-us__form textarea{
+    padding: 5px 5px 0 5px;
     height: 300px;
     border-radius: 3px;
     resize:vertical;
@@ -678,6 +720,10 @@ footer .footer__card a{
     .portfolio__section header{
         width: 100%;
         text-align: center; 
+    }
+    .portfolio__grid{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
     }
 
 
