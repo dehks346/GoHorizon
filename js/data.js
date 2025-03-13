@@ -67,8 +67,8 @@ const pricingData = [
         oldPrice: "£150",
         description: "One time payment",
         features: [
-            "Responsive Design",
-            "Fast, Lightweight, and Optimised",
+            "1-3 Pages",
+            "Mobile Compatability",
             "Basic SEO Setup",
             "1 Round Of Revision"
         ]
@@ -78,10 +78,10 @@ const pricingData = [
         oldPrice: "£300",
         description: "One time payment",
         features: [
-            "Responsive Design",
-            "Fast, Lightweight, and Optimised",
-            "Basic SEO Setup",
-            "1 Round Of Revision"
+            "3-8 Pages",
+            "Mobile Optimised",
+            "Advanced SEO Setup",
+            "Contact Form Integration",
         ]
     },
     {
@@ -89,10 +89,10 @@ const pricingData = [
         oldPrice: "Pricing on quote",
         description: "Custom payment plans",
         features: [
-            "Responsive Design",
-            "Fast, Lightweight, and Optimised",
-            "Basic SEO Setup",
-            "1 Round Of Revision"
+            "Unlimited Pages",
+            "Custom Design",
+            "Unlimited Revisions",
+            "Google Analytics Integration",
         ]
     }
 ];

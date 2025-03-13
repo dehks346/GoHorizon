@@ -1,131 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon | About Horizon</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon | Web Design Studio</title>
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/nav-footer.css">
+  <!-- Optional: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar__brand">
-                <a href="/index.html"><img src="/assets/images/w_logo_text.png" alt="horizon logo" class="navbar__logo"></a>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container header-container">
+            <a href="/" class="logo">
+                <div class="logo-mark"></div>
+                <span class="logo-text">Horizon</span>
+            </a>
+            
+            <nav class="main-nav">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="/pages/about-horizon.html" class="nav-link">About</a>
+                <a href="/pages/website-portfolio.html" class="nav-link">Portfolio</a>
+                <a href="/index.html#services" class="nav-link">Services</a>
+                <a href="/index.html#contact" class="btn btn-primary">Contact Us</a>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
             </div>
-            <ul class="navbar__links">
-                <li><a href="/index.html" class="hover-underline-animation transition">Home</a></li>
-                <li><a href="/pages/about-horizon.html" class="hover-underline-animation transition">About</a></li>
-                <li><a href="/pages/website-portfolio.html" class="hover-underline-animation transition">Portfolio</a></li>
-                <li><a href="/index.html#services" class="hover-underline-animation transition">Services</a></li>
-                <li><a href="/index.html#contact" class="hover-underline-animation transition">Contact</a></li>
-            </ul>
-            <button class="navbar__toggle" aria-label="Toggle menu">&#9776;</button>
-        </nav>
-    </header>
-    <main>
-        <section class="title__section">
-            <h1 class="title-text text-gradient">About Horizon</h1>
-            <p class="title-subtitle">
-                Horizon is a web design & development business specialising in modern, professional websites for local businesses, cafés, and tradespeople. Our focus is on creating high-quality, fast, and affordable websites that give businesses a strong and effective online presence.
-                <br><br>
-                We keep things simple—no unnecessary complexity, just well-designed websites that work. Every project is approached with attention to detail, efficiency, and a commitment to delivering results that meet the needs of businesses without the premium price tag.
-            </p>
-        </section>
-        <section class="founder__section flex-center">
-            <div>
-                <img src="/assets/images/gif.gif" class="founder__image" alt="animated graphic of the founder of Horizon">
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="/index.html" class="mobile-nav-link">Home</a>
+                <a href="/pages/about-horizon.html" class="mobile-nav-link">About</a>
+                <a href="/pages/website-portfolio.html" class="mobile-nav-link">Portfolio</a>
+                <a href="/index.html#services" class="mobile-nav-link">Services</a>
+                <a href="/index.html#contact" class="mobile-nav-link">Contact</a>
+            </nav>
             </div>
-            <div class="founder__text">
-                <h1 class="title-text text-gradient">Meet the Founder</h1>
-                <p class="title-subtitle">
-                    I’m the founder of Horizon, a web development business committed to delivering high-quality websites. With almost 5 years of experience in web design, I’ve honed my skills and passion for creating sleek, functional websites that meet the needs of my clients. I specialize in ensuring that every project is executed with precision and care, always focusing on delivering the best results.
-                    <br>
-                    <br>
-                    At Horizon, I prioritize my clients’ needs, putting in the effort and attention to detail to create websites that drive results. My dedication to every project reflects my commitment to excellence—because I believe in delivering more than just a product, but a real solution for each client.
-                </hp>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-radial"></div>
             </div>
-        </section>
-        <section class="process__section flex-center">
-            <div class="process__title-container">
-                <h1 class="title-text text-gradient">Our Process</h1>
-            </div>
-            <div class="process__item flex-center">
-                <div class="process__item-number">
-                    .00
-                </div>
-                <div class="process__item-desc">
-                    <h3>Consultation</h3>
-                    <p>We discuss your needs and set project goals.</p>
-                </div>
-            </div>
-            <div class="process__item flex-center">
-                <div class="process__item-number">
-                    .01
-                </div>
-                <div class="process__item-desc">
-                    <h3>Design</h3>
-                    <p>Our designers craft a stunning UI/UX for your project.</p>
-                </div>
-            </div>
-            <div class="process__item flex-center">
-                <div class="process__item-number">
-                    .02
-                </div>
-                <div class="process__item-desc">
-                    <h3>Development</h3>
-                    <p>We bring the design to life with clean, efficient code.</p>
+            
+            <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">This is horizon</div>
+                
+                <h1 class="hero-title">
+                Designing the Future of the Web
+                </h1>
+                
+                <p class="hero-subtitle">
+                We build high-end, lightning-fast websites that don’t just look amazing—they perform. Every pixel, every interaction, every detail is crafted with precision to create seamless digital experiences that stand out.
+                </p>
+                
+                <div class="hero-cta">
+                <a href="/pages/website-portfolio.html" class="btn btn-primary">
+                    See Our Work
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="/index.html#services" class="btn btn-outline">
+                    Our Services
+                </a>
                 </div>
             </div>
-            <div class="process__item flex-center">
-                <div class="process__item-number">
-                    .03
-                </div>
-                <div class="process__item-desc">
-                    <h3>Review</h3>
-                    <p>We test everything to ensure top-notch performance.</p>
-                </div>
             </div>
-            <div class="process__item flex-center">
-                <div class="process__item-number">
-                    .04
-                </div>
-                <div class="process__item-desc">
-                    <h3>Deployment</h3>
-                    <p>We launch your project and ensure smooth delivery.</p>
-                </div>
+            
+            <div class="scroll-indicator">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </div>
         </section>
-    </main>
-    <footer class="section-padding">
-        <div class="footer__top-section">
-            <div class="footer__card">
-                <h4 class="footer__card-title">Company</h4>
-                <a href=""><h4>Home</h4></a>
-                <a href=""><h4>Portfolio</h4></a>
-                <a href=""><h4>Contact</h4></a>
+
+        <section class="stats">
+            <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                <span class="stat-value">5+</span>
+                <span class="stat-label">Years of development expertise</span>
+                </div>
+                <div class="stat-card">
+                <span class="stat-value">10+</span>
+                <span class="stat-label">Websites launched</span>
+                </div>
+                <div class="stat-card">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Client Satisfaction</span>
+                </div>
             </div>
-            <div class="footer__card">
-                <h4 class="footer__card-title">Product</h4>
-                <a href=""><h4>About</h4></a>
-                <a href=""><h4>Careers</h4></a>
             </div>
-            <div class="footer__card">
-                <h4 class="footer__card-title">Legal</h4>
-                <a href=""><h4>Privacy Policy</h4></a>
-                <a href=""><h4>Terms of Service</h4></a>
-                <a href=""><h4>Cookie Policy</h4></a>
+        </section>
+
+        <section class="about">
+            <div class="container">
+            <h2 class="section-title">The Horizon Story</h2>
+            
+            <div class="about-content">
+                <p>
+                At Horizon, we believe that exceptional digital experiences are born at the intersection of design, technology, and strategy. Founded in 2013, our studio has evolved from a small team of passionate creators to a full-service digital agency working with clients across the globe.
+                </p>
+                <p>
+                Our approach is rooted in understanding the unique challenges and opportunities of each client we work with. We don't just build websites—we craft digital solutions that drive business growth, enhance brand perception, and create meaningful connections with users.
+                </p>
+                <p>
+                What sets us apart is our commitment to excellence in every aspect of our work, from the pixel-perfect designs to the clean, efficient code that powers them. We're not satisfied with "good enough"—we strive for exceptional, every time.
+                </p>
             </div>
-        </div>
-        <div class="footer__divider"></div>
-        <div class="footer__bottom-section">
-            <div>
-                © Horizon 2025. All Rights Reserved
             </div>
-        </div>
-    </footer>
-    <script src="/js/navbar.js"></script>
-</body>
+        </section>
+
+        <section class="team">
+            <div class="container">
+            <div class="team-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">
+                Our talented team of designers, developers, and strategists are passionate about creating exceptional digital experiences.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                <div class="member-image">
+                    <img src="https://media.gettyimages.com/id/163640563/photo/ready-for-anything-in-the-corporate-world.jpg?s=612x612&w=gi&k=20&c=64S6LNiUqRrmPHACgyy9r_T_kLpkegfG0D5RnpUgNX8=" alt="Alex Johnson">
+                    <div class="image-overlay"></div>
+                </div>
+                <h3 class="member-name">Alex Johnson</h3>
+                <p class="member-role">Founder & Creative Director</p>
+                <p class="member-bio">With over 15 years of experience in digital design, Alex leads our creative vision and ensures every project exceeds expectations.</p>
+                </div>
+                
+                <div class="team-member">
+                <div class="member-image">
+                    <img src="https://media.gettyimages.com/id/163640563/photo/ready-for-anything-in-the-corporate-world.jpg?s=612x612&w=gi&k=20&c=64S6LNiUqRrmPHACgyy9r_T_kLpkegfG0D5RnpUgNX8=" alt="Sam Rivera">
+                    <div class="image-overlay"></div>
+                </div>
+                <h3 class="member-name">Sam Rivera</h3>
+                <p class="member-role">Lead Developer</p>
+                <p class="member-bio">Sam brings technical expertise and innovation to every project, specializing in creating scalable and performant web applications.</p>
+                </div>
+                
+                <div class="team-member">
+                <div class="member-image">
+                    <img src="https://media.gettyimages.com/id/163640563/photo/ready-for-anything-in-the-corporate-world.jpg?s=612x612&w=gi&k=20&c=64S6LNiUqRrmPHACgyy9r_T_kLpkegfG0D5RnpUgNX8=" alt="Taylor Kim">
+                    <div class="image-overlay"></div>
+                </div>
+                <h3 class="member-name">Taylor Kim</h3>
+                <p class="member-role">UX/UI Designer</p>
+                <p class="member-bio">Taylor combines aesthetic sensibility with user-centered design principles to create intuitive and engaging digital experiences.</p>
+                </div>
+                
+                <div class="team-member">
+                <div class="member-image">
+                    <img src="https://media.gettyimages.com/id/163640563/photo/ready-for-anything-in-the-corporate-world.jpg?s=612x612&w=gi&k=20&c=64S6LNiUqRrmPHACgyy9r_T_kLpkegfG0D5RnpUgNX8=" alt="Jordan Patel">
+                    <div class="image-overlay"></div>
+                </div>
+                <h3 class="member-name">Jordan Patel</h3>
+                <p class="member-role">Project Manager</p>
+                <p class="member-bio">Jordan ensures projects run smoothly from concept to completion, keeping everything on schedule and within budget.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title">Ready to Transform Your Digital Presence?</h2>
+                <p class="section-subtitle">
+                Let's create something exceptional together. Reach out to discuss your project and discover how we can help you achieve your digital goals.
+                </p>
+                <a href="/index.html#contact" class="btn btn-primary">
+                Start a Project
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                <a href="/" class="logo">
+                    <div class="logo-mark"></div>
+                    <span class="logo-text">Horizon</span>
+                </a>
+                <p class="footer-tagline">
+                    Creating exceptional digital experiences that drive business growth and user engagement.
+                </p>
+                </div>
+                
+                <div class="footer-links">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-nav">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/about-horizon.html">About</a></li>
+                    <li><a href="/pages/website-portfolio.html">Portfolio</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul class="footer-nav">
+                    <li><a href="/pages/horizon-privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/pages/horizon-terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="/pages/horizon-cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                </div>
+                
+                <div class="footer-social">
+                <h3 class="footer-heading">Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                    </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                    </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                    </svg>
+                    </a>
+                </div>
+                <p class="copyright">
+                    © <span id="current-year">2023</span> Horizon. All rights reserved.
+                </p>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <script>
+            // Update current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Intersection Observer for animations
+            const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+                }
+            });
+            }, observerOptions);
+            
+            // Observe all sections for animation
+            document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+            });
+        </script>
+        <script src="/js/navbar.js"></script>
+    </body>
 </html>
