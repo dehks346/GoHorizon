@@ -820,16 +820,18 @@ section {
         flex-direction: column-reverse;
         align-items: center;
         height: auto;
-        padding: 50px 0;
+        padding: 50px 0;;
     }
     .home__section{
         width: 100%;
-        height: auto;
+        height: auto;    
     }
     .home__text{
         z-index: 3;
         order: 2;
         text-align: center;
+        height: auto;
+        padding: 20px 0 0 0;
     }
     .home__title-text{
         font-size: 3.5rem;
@@ -839,32 +841,24 @@ section {
         max-width: 100%;
         margin-top: 20px;
     }
-
     .portfolio-header h2 {
         font-size: 2.5rem;
     }
-    
     .carousel {
         height: 500px;
     }
-    
     .carousel-content {
         padding: 30px;
     }
-    
     .carousel-title {
         font-size: 1.5rem;
     }
-    
     .cta-section {
         padding: 40px 20px;
     }
-    
     .cta-title {
         font-size: 2rem;
     }
-
-
     .contact__section {
         flex-direction: column-reverse; /* Stack the two sides */
     }
@@ -886,6 +880,21 @@ section {
     }
     .contact-us__form input, .contact-us__form textarea, .contact__btn {
         max-width: 90%;
+    }
+    .pricing__card{
+        width: 80%;
+    }
+    .contact-us__huge-text{
+        font-size: 4rem;
+    line-height: 130%;
+    }
+    .contact-us__discount-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-us__text-discount{
+        width: 80%;
     }
 }
 
