@@ -503,10 +503,12 @@ section {
     background-color: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
   }
-
+.portfolio__carousel-nav-btn-container{
+    padding: 10px 0 10px 0;
+    width: 100vw;
+}
   /* Navigation Controls */
   .carousel-nav {
-    position: absolute;
     bottom: 40px;
     right: 40px;
     display: flex;
@@ -764,7 +766,7 @@ section {
     height: auto;
     color: #ffffff;
     border: 1px solid #ffffff;
-    width: 400px; 
+    width: 80%; 
     background: linear-gradient(to right, #3b82f6, #8b5cf6); 
     padding: 25px; 
     border-radius: 8px;
