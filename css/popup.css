@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Subtle dark overlay */
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker for a luxury feel */
     display: none;
     z-index: 1000000001;
     animation: fadeIn 0.3s ease-out;
@@ -17,19 +17,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px; /* Minimal size for a modern, compact look */
-    max-width: 80vw;
-    padding: 40px 20px;
-    background: #fff; /* Clean, white background */
-    color: #333; /* Dark text for readability */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    width: 420px; /* Increased width for better balance */
+    max-width: 90vw;
+    padding: 45px 30px;
+    background: #fff;
+    color: #222; /* Dark text for readability */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Stronger shadow for premium look */
     text-align: center;
     display: none;
     z-index: 10000000001;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 16px; /* More rounded corners for a softer, high-end feel */
     border: none; /* No border for sleekness */
-    font-family: 'Helvetica Neue', sans-serif; /* Modern, clean font */
+    font-family: 'Inter', sans-serif; /* Modern, clean font */
     animation: popupFadeIn 0.4s ease-out;
+    
 }
 
 /* Fade-in and Popup Animations */
@@ -45,41 +46,72 @@
 
 /* Headline */
 .popup h2 {
-    font-size: 26px; /* Larger font to grab attention */
-    color: #111; /* Darker color for a premium feel */
-    font-weight: 600; /* Bold weight to emphasize the headline */
-    margin-bottom: 20px;
+    font-size: 1.6rem; /* Slightly bigger for more impact */
+    color: #111; /* Deep black for strong contrast */
+    font-weight: 900; /* Extra bold for luxury branding */
+    margin-bottom: 18px;
 }
 
 /* Paragraph */
 .popup p {
-    font-size: 18px; /* Slightly larger text for emphasis */
-    color: #666; /* Lighter text for clarity */
-    margin-bottom: 30px; /* More space between text and button */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333; /* Softer text for readability */
+    margin-bottom: 28px; /* More space between text and button */
+    line-height: 1.6; /* Better line spacing */
 }
 
 /* Call to Action Button */
 .popup button {
-    padding: 12px 0;
-    width: 100%; /* Full width for impact */
-    border: 1px solid #333; /* Sleek border for the button */
-    background: #2672ff; /* Dark background for contrast */
-    color: #fff; /* White text for readability */
-    font-size: 18px; /* Slightly larger text for the button */
-    font-weight: 600; /* Bold for emphasis */
-    border-radius: 25px; /* Rounded edges for a modern, sleek look */
+    padding: 14px 0;
+    width: 100%;
+    border: none;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px; /* Slightly rounder for a polished look */
     cursor: pointer;
     transition: all 0.3s ease;
-    text-transform: uppercase; /* Uppercase for modern appeal */
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); /* Soft glow effect */
 }
 
 .popup button:hover {
-    background: #111; /* Slightly darker background on hover */
-    border-color: #111; /* Darker border for hover */
-    transform: translateY(-2px); /* Subtle lift effect */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
 }
 
 .popup button:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.4); /* Soft focus effect for accessibility */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Alternative Link */
+.popup a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #666; /* Softer grey for premium feel */
+    display: inline-block;
+    margin-top: 12px;
+    transition: color 0.3s ease;
+}
+
+.popup a:hover {
+    color: #444;
+}
+
+/* Close Button */
+.popup .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup .close-btn:hover {
+    color: #333;
 }
