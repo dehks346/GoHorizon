@@ -634,8 +634,6 @@ section {
 }
 .pricing__btn-a{
     color: #ffffff !important;
-    font-size: 0.7rem;
-    font-weight: 300;
     letter-spacing: -0.02em;
     margin-bottom: 10px;
 }
@@ -646,6 +644,8 @@ section {
     height: 40px;
     border-radius: 8px;
     box-shadow: none;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .pricing__card-btn:hover {
     transform: scale(1.05);

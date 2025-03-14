@@ -293,11 +293,11 @@
     margin-bottom: var(--spacing-16);
   }
   
-  .team-grid {
+.team-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure equal spacing */
     gap: var(--spacing-8);
-  }
+}
   
   .team-member {
     transition: all var(--transition-normal);
