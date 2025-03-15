@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dehks346.github.io/GoHorizon/sitemap.xml
