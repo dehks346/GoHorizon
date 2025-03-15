@@ -14,12 +14,27 @@
 <body>
     <div class="stars"></div>
     <div class="twinkling"></div>
-    <div class="overlay" id="popupOverlay"></div>
-    <div class="popup" id="popupBox">
-        <h2>50% OFF ALL SERVICES</h2>
-        <p>To celebrate the launch of Horizon, we are running a 50% off all services. This discount is automatically applied. Limited time only.</p>
-        <button onclick="closePopup()">GET 50% OFF!</button>
-        <a onclick="closePopup()">No Thanks.</a>
+    <div class="popup__overlay" id="popupOverlay">
+        <!-- Popup container -->
+        <div class="popup" id="popup">
+            <!-- Subtle geometric accents -->
+            <div class="geometric-accent"></div>
+            <div class="geometric-accent"></div>
+            
+            <!-- Close button -->
+            <button class="popup-close" onclick="closePopup()">×</button>
+            
+            <!-- Popup content -->
+            <div class="popup-eyebrow">Limited Time Offer</div>
+            <h2 class="popup-title">Grand Launch</h2>
+            <p class="popup-subtitle">Celebrate the Launch of Horizon with an Exclusive offer.</p>
+            
+            <div class="discount-highlight">50% Off</div>
+            
+            <p class="popup-details">For a limited time, enjoy half off all services as we celebrate our grand opening. Elevate your experience today.</p>
+            
+            <button class="popup-button" onclick="closePopup()">Explore Services</button>
+        </div>
     </div>
     <!-- Header -->
     <header class="header">

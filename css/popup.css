@@ -1,5 +1,5 @@
 /* Overlay */
-.overlay {
+.popup__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,10 @@
     display: none;
     z-index: 1000000001;
     animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #000000;
+
 }
 
 /* Popup Box */
@@ -17,101 +21,170 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 420px; /* Increased width for better balance */
-    max-width: 90vw;
-    padding: 45px 30px;
-    background: #fff;
-    color: #222; /* Dark text for readability */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Stronger shadow for premium look */
+    width: 90%; /* Increased width for better balance */
+    max-width: 460px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: none;
     z-index: 10000000001;
-    border-radius: 16px; /* More rounded corners for a softer, high-end feel */
     border: none; /* No border for sleekness */
     font-family: 'Inter', sans-serif; /* Modern, clean font */
     animation: popupFadeIn 0.4s ease-out;
     
 }
-
-/* Fade-in and Popup Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes popupFadeIn {
-    0% { opacity: 0; transform: translate(-50%, -40%); }
-    100% { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-/* Headline */
-.popup h2 {
-    font-size: 1.6rem; /* Slightly bigger for more impact */
-    color: #111; /* Deep black for strong contrast */
-    font-weight: 900; /* Extra bold for luxury branding */
-    margin-bottom: 18px;
-}
-
-/* Paragraph */
-.popup p {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #333; /* Softer text for readability */
-    margin-bottom: 28px; /* More space between text and button */
-    line-height: 1.6; /* Better line spacing */
-}
-
-/* Call to Action Button */
-.popup button {
-    padding: 14px 0;
-    width: 100%;
-    border: none;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 30px; /* Slightly rounder for a polished look */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3); /* Soft glow effect */
-}
-
-.popup button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
-}
-
-.popup button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
-}
-
-/* Alternative Link */
-.popup a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: #666; /* Softer grey for premium feel */
-    display: inline-block;
-    margin-top: 12px;
-    transition: color 0.3s ease;
-}
-
-.popup a:hover {
-    color: #444;
-}
-
-/* Close Button */
-.popup .close-btn {
+.popup::before {
+    content: '';
     position: absolute;
-    top: 12px;
-    right: 15px;
-    font-size: 20px;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #007aff, #5ac8fa);
+    border-radius: 20px;
 }
 
-.popup .close-btn:hover {
-    color: #333;
-}
+        /* Close button */
+        .popup-close {
+            width: 30px;
+            height: 30px;
+            color: #343434;
+            border-radius: 50%;
+            background-color: #00000029;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .popup-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #007aff;
+            margin-bottom: 10px;
+        }
+
+        .popup-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0 0 10px;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .popup-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: #86868b;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* Highlight for the discount */
+        .discount-highlight {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin: 20px 0;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .discount-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 3px;
+            transform: scaleX(0.7);
+            opacity: 0.7;
+        }
+
+        .popup-details {
+            font-size: 14px;
+            color: #86868b;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Premium button */
+        .popup-button {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.2px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+        }
+
+        .popup-button:hover {
+            background-color: #0062cc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
+        }
+
+        /* Subtle geometric accent */
+        .geometric-accent {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(90, 200, 250, 0.05) 100%);
+            top: -100px;
+            right: -100px;
+            z-index: -1;
+        }
+
+        .geometric-accent:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: -75px;
+            top: auto;
+            right: auto;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Hide popup with JavaScript */
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .popup {
+                padding: 30px 20px;
+            }
+            
+            .discount-highlight {
+                font-size: 40px;
+            }
+            
+            .popup-title {
+                font-size: 28px;
+            }
+        }
