@@ -82,7 +82,7 @@
  /* Hero Section */
  .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,6 +222,14 @@
         max-width: 60%;
         margin: 0 auto;
     }
+
+    .portfolio__title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
 .portfolio__container{
     padding-top: 10vh;
     width: 100%;
@@ -229,48 +237,41 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #000000, #2d2d2d);
 }
 
 .portfolio-item, .portfolio-item2{
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.074);
-    background-color: #000000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #101010;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
     position: relative;
-    width: 80%;
+    width: 50%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     transition: ease-in-out 0.3s;
     margin-bottom: 50px;
   }
-  .portfolio-item, .portfolio-item2:hover{
+.portfolio-item, .portfolio-item2:hover{
     transform: translateY(-5px);
   }
 .portfolio-item2{
-    flex-direction: row-reverse;
 }
 .portfolio-img-container{
-    width: 50%;
+    width: 100%;
     height: auto;
     overflow: hidden;
 }
-.portfolio-img{
+.portfolio-img, .portfolio-img2{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 12px 0 0 12px;
+    border-radius: 12px 12px 0 0;
 }
-.portfolio-img2{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0px 12px 12px 0px;
-}
+
 .portfolio-text{
-    width: 50%;
+    width: 100%;
     height: auto;
     padding: 20px;
 }
@@ -309,7 +310,7 @@
 
 }
 .tag{
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background-color: #000000;
     color: var(--text-light);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
@@ -360,18 +361,20 @@
 .testimonial-section {
     text-align: center;
     padding: 50px 20px;
+    height: auto;
+    background-color: #000;
+    
 }
 
 .testimonial-section h1 {
     font-size: 2.5em;
     color: rgb(255, 255, 255);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .testimonial-carousel {
     display: flex;
     justify-content: center;
-    overflow: hidden;
     width: 80%;
     margin: 0 auto;
     scroll-behavior: smooth;
@@ -380,17 +383,21 @@
 
 .testimonial-card {
     width: 400px;
+    height: auto;
     margin: 0 10px;
     padding: 20px;
     border-radius: 8px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 6px rgba(118, 118, 118, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.074);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     text-align: center;
 }
 
 .testimonial-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    transform-origin: center;
 }
 
 .client-image {
@@ -399,7 +406,6 @@
     margin: 0 auto 10px auto;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid royalblue;
 }
 
 .client-image img {
@@ -409,21 +415,24 @@
 }
 
 .testimonial-text {
-    font-size: 1.2em;
+    font-size: 1em;
     font-style: italic;
     margin-bottom: 15px;
-    color: #000000;
+    color: #e2e2e2;
 }
 
 h3 {
     font-size: 1.3em;
     margin: 10px 0 5px 0;
-    color: #333;
+    background: linear-gradient(135deg, #4169e1, #00bfff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0C99D3;
 }
 
 .client-role {
     font-size: 0.9em;
-    color: gray;
 }
 
 /* Responsive Design */
