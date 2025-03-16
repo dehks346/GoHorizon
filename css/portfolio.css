@@ -229,7 +229,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #111;
+    background: linear-gradient(180deg, #000000, #2d2d2d);
 }
 
 .portfolio-item, .portfolio-item2{
@@ -354,5 +354,93 @@
     }
     .portfolio-img2{
         border-radius: 12px 12px 0 0;
+    }
+}
+
+.testimonial-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonial-section h1 {
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap; /* Default: No wrapping for larger screens */
+}
+
+.testimonial-card {
+    width: 400px;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgba(118, 118, 118, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.client-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid royalblue;
+}
+
+.client-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.client-role {
+    font-size: 0.9em;
+    color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center; /* Center cards when stacked */
+    }
+
+    .testimonial-card {
+        flex: 1 1 90%; /* Each card takes up 90% of the screen width */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        flex: 1 1 100%; /* Each card takes up full width on mobile */
     }
 }
