@@ -541,7 +541,7 @@ img {
 }
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   
@@ -865,9 +865,6 @@ textarea:focus-visible,
     outline-offset: 2px;
 }
 @media (max-width: 1400px){
-    .pricing__card-container{
-        grid-template-columns: repeat(2, 1fr); /* Adjust to 1 column on small screens */
-    }
     .pricing__card{
         margin-bottom: 50px;
     }
@@ -877,10 +874,7 @@ textarea:focus-visible,
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media  (min-width: 950px) {
-    .pricing-grid, .portfolio__grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (min-width: 950px) {
     .portfolio__grid-item{
         width: 70%;
     }
@@ -891,7 +885,15 @@ textarea:focus-visible,
       flex: 1;
     }
 }
+@media (max-width: 950px) {
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
 @media (max-width: 768px) {
+  
     .headline {
         font-size: 56px;
     }
@@ -964,7 +966,7 @@ textarea:focus-visible,
     }
     .contact-us__form-container {
         width: 100%;
-        padding: 20px;
+        padding: 0;
     }
     .contact-us__form input, .contact-us__form textarea, .contact__btn {
         max-width: 90%;
@@ -987,6 +989,12 @@ textarea:focus-visible,
     .form-column {
       padding: 80px;
     }
+    .content-column {
+      padding: 80px;
+    }
+    .content-wrapper{
+    }
+
 }
 @media (min-width: 640px) {
   .project-grid {
