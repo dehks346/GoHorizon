@@ -318,6 +318,7 @@ textarea:focus-visible,
 /* Services Section */
 .services {
 	background-color: #090909;
+	padding: 75px 0;
 }
 
 .services_grid {

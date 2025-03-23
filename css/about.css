@@ -293,63 +293,78 @@
     margin-bottom: var(--spacing-16);
   }
   
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure equal spacing */
-    gap: var(--spacing-8);
+.team-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
 }
-  
-  .team-member {
-    transition: all var(--transition-normal);
-  }
-  
-  .member-image {
-    position: relative;
-    border-radius: var(--radius-2xl);
-    overflow: hidden;
-    margin-bottom: var(--spacing-4);
-    aspect-ratio: 1/1;
-  }
-  
-  .member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-  }
-  
-  .image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-  }
-  
-  .team-member:hover .member-image img {
-    transform: scale(1.05);
-  }
-  
-  .team-member:hover .image-overlay {
-    opacity: 1;
-  }
-  
-  .member-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-1);
-  }
-  
-  .member-role {
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: var(--spacing-2);
-    font-size: 0.875rem;
-  }
-  
-  .member-bio {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.875rem;
-  }
+.founder_image-container, .founder_info-container{
+  flex: 1;
+  padding: 30px;
+
+}
+.founder_image-container{
+
+}
+.founder_image{
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-height: 100%;
+}
+
+.founder_name{
+  color: white;
+  font-size: 2.5rem;
+}
+.founder_title{
+	color: #3b82f6;
+	background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+  margin-bottom: 15px;
+}
+.founder_quote{
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 1.3rem;
+  font-weight: 400;
+}
+.founder_quote span{
+  color: #3b82f6;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.founder_desc{
+  color: #888;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.founder_info-container p{
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.founder_tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.founder_tag{
+  background-color: #3b82f6;
+  color: white;
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+
   
   /* CTA Section */
   .cta {
