@@ -159,9 +159,14 @@ a:hover {
 
         /* Project Sections */
         .project-section {
-            padding: var(--spacing-xxl) 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto var(--spacing-xl) auto;
+            padding: 0 var(--spacing-lg);
         }
 
         .project-section:last-child {
@@ -169,27 +174,18 @@ a:hover {
         }
 
         .project-container {
-            background-color: rgb(29, 29, 29);
+            background-color: #101010;
+            border: 1px solid rgba(255, 255, 255, 0.074);
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-xl);
             align-items: center;
             border-radius: 8px;
-        }
-
-        .project-container.reverse {
-            direction: rtl;
-        }
-
-        .project-container.reverse .project-content {
-            direction: ltr;
         }
 
         .project-image {
             width: 100%;
             height: auto;
             border-radius: 8px 8px 0 0;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             transition: var(--transition);
         }
 
@@ -203,22 +199,21 @@ a:hover {
         }
 
         .project-content p {
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
 
         .project-details {
-            margin-top: var(--spacing-xl);
+            margin-top: var(--spacing-md);
         }
 
         .project-details h4 {
             margin-bottom: var(--spacing-md);
             font-size: 20px;
-            color: var(--primary-color);
         }
 
         .project-details ul {
             list-style-type: none;
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
 
         .project-details li {
@@ -229,7 +224,7 @@ a:hover {
 
         .project-details li:before {
             content: "•";
-            color: var(--primary-color);
+            color: var(--primary-white);
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -250,170 +245,6 @@ a:hover {
             border-radius: 20px;
             font-size: 12px;
             color: var(--text-secondary);
-        }
-
-        /* Testimonials Section - Dark Mode */
-        .testimonials {
-            background-color: var(--background-light);
-            padding: var(--spacing-xxl) 0;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .testimonials-header h2 {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .testimonials-header p {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .testimonials-container {
-            position: relative;
-            padding: 0 var(--spacing-lg);
-        }
-
-        .testimonials-slider {
-            display: flex;
-            flex-direction: row;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            gap: var(--spacing-xl);
-            padding: var(--spacing-lg) 0;
-        }
-
-        .testimonial-card {
-            flex: 0 0 calc(33.333% - var(--spacing-xl));
-            scroll-snap-align: start;
-            background-color: var(--card-background);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-xl);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-            min-width: 300px;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .testimonial-quote {
-            font-size: 18px;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin-bottom: var(--spacing-lg);
-            position: relative;
-        }
-
-        .testimonial-quote:before {
-            content: """;
-            font-size: 60px;
-            color: var(--primary-color);
-            opacity: 0.2;
-            position: absolute;
-            top: -20px;
-            left: -10px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .testimonial-info h4 {
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-
-        .testimonial-info p {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .testimonial-rating {
-            display: flex;
-            gap: 2px;
-            margin-top: var(--spacing-sm);
-            color: gold;
-        }
-
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-xl);
-        }
-
-        .slider-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--card-background);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .slider-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* Process Section */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
-        }
-
-        .process-step {
-            text-align: center;
-            padding: var(--spacing-lg);
-            background-color: var(--card-background);
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-        }
-
-        .process-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .step-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: 600;
-            margin: 0 auto var(--spacing-lg);
-        }
-
-        .process-step h3 {
-            margin-bottom: var(--spacing-md);
         }
 
         /* CTA Section */
@@ -457,14 +288,6 @@ a:hover {
             
         }
 
-        @media (max-width: 1100px) {
-            .testimonials-slider {
-                display: flex;
-                flex-direction: column;
-            }
-            
-        }
-
         @media (max-width: 992px) {
             h1 {
                 font-size: 40px;
@@ -479,23 +302,10 @@ a:hover {
                 opacity: 0.5;
             }
             
-            .project-container {
+            .project-section {
                 grid-template-columns: 1fr;
-                gap: var(--spacing-lg);
             }
             
-            .project-container.reverse {
-                direction: ltr;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--spacing-xl) var(--spacing-lg);
-            }
-            
-            .testimonial-card {
-                flex: 0 0 calc(100% - var(--spacing-xl));
-            }
         }
 
         @media (max-width: 768px) {
@@ -513,10 +323,6 @@ a:hover {
         }
 
         @media (max-width: 576px) {
-            .nav-links {
-                display: none;
-            }
-            
             h1 {
                 font-size: 32px;
             }

@@ -263,7 +263,7 @@ textarea:focus-visible,
 /* about us*/
 .about{
 	background-color: #000000;
-	padding: 150px 0;
+	padding: 150px 0 50px 0;
 }
 .about_main-container {
     display: flex;
@@ -404,12 +404,10 @@ textarea:focus-visible,
 	transition: ease-in-out 0.3s;
 }
 
-.portfolio_card:hover {
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-	transform: translateY(-2px);
-}
 
 .portfolio_card-img {
+	position: relative;
+
 	aspect-ratio: 16/9;
 	overflow: hidden;
 	display: flex;
@@ -433,6 +431,7 @@ textarea:focus-visible,
 
 .portfolio_card-content {
 	padding: 1.5rem;
+	min-height: 230px;
 }
 
 .portfolio_card-content h3,
