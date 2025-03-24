@@ -221,6 +221,9 @@ textarea:focus-visible,
 	max-width: 70%;
 	border-radius: 50%;
 }
+#earth {
+    will-change: transform;
+}
 
 
 /* trusted by */
