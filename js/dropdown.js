@@ -1,17 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var coll = document.getElementsByClassName("collapsible");
-  
-    for (let i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-  
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null; // Collapse
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px"; // Expand
-        }
-      });
+const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+function toggleAccordion() {
+  const items = document.querySelectorAll('.js-acc-item');
+  const thisItem = this.parentNode;
+
+  items.forEach(item => {
+    if (thisItem == item) {
+      thisItem.classList.toggle('is-open');
+      return;
     }
+    item.classList.remove('is-open');
   });
-  
+}
