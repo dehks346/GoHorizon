@@ -167,6 +167,7 @@ textarea:focus-visible,
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
+	background-color: #ffffff;
   }
   
   .logo-track {
