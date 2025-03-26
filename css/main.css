@@ -11,6 +11,15 @@ html {
 	margin: 0;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar{
+	height: 4px;
+	width: 4px;
+	background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+	background: #000;
+	border-radius: 10px;
+}
 
 input,
 button,
@@ -24,7 +33,7 @@ body {
 	;
 	line-height: 1.5;
 	color: #ffffff;
-	background-color: #00000000;
+	background-color: #ffffff;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -65,6 +74,8 @@ p {
 	font-weight: 200;
 }
 
+
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -96,8 +107,8 @@ img {
 
 .section-header {
 	padding-top: 50px;
-	text-align: center;
 	margin-bottom: 3rem;
+	text-align: center;
 }
 
 .section-header h2 {
@@ -108,30 +119,9 @@ img {
 
 .section-header p {
 	font-size: 1.2rem;
-	max-width: 600px;
 	margin: 0 auto;
 }
 
-.stars {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #000 url('../assets/images/stars.png') repeat;
-	z-index: -2;
-}
-
-.twinkling {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: transparent url('../assets/images/twinkling.png') repeat;
-	z-index: -1;
-	animation: move-twink-back 200s linear infinite;
-}
 
 @keyframes move-twink-back {
 	from {
@@ -171,7 +161,73 @@ textarea:focus-visible,
 	outline-offset: 2px;
 }
 
+.logo-carousel-container {
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+  }
+  
+  .logo-track {
+	display: flex;
+	width: max-content;
+  }
+  
+  .logo-slide {
+	display: flex;
+	align-items: center;
+  }
+  .logo-item {
+	flex: 0 0 auto;
+	width: 150px; /* Fixed width */
+	height: 80px; /* Fixed height */
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden; /* Prevents overflow issues */
+  }
+  
+  .logo-item img {
+	width: 100%; /* Ensures the image takes full width */
+	height: auto; /* Keeps the aspect ratio */
+	max-width: 80%; /* Prevents the image from exceeding the container */
+	max-height: 80%; /* Ensures the image does not overflow */
+	object-fit: contain; /* Maintains aspect ratio without stretching */
+  }
 
+  .stars {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000 url('../assets/images/stars.png') repeat;
+	z-index: -2;
+}
+
+.twinkling {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent url('../assets/images/twinkling.png') repeat;
+	z-index: -1;
+	animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+  
 /* Home section */
 .home {
 	height: 100vh;
@@ -226,95 +282,61 @@ textarea:focus-visible,
 }
 
 
-/* trusted by */
-.trusted {
-	height: auto;
-	max-width: 100%;
-	background-color: #000000;
-	margin-top: 2rem;
-	padding: 2rem 0;
-	text-align: center;
-	gap: 30px;
-}
-
-.trusted_title-container {
-	margin-bottom: 1rem;
-}
-
-.trusted_logo-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 3rem;
-	/* Adjust spacing between logos */
-	flex-wrap: wrap;
-	/* Ensures responsiveness */
-	max-width: 800px;
-	margin: auto;
-}
-
-.brand-logo {
-	height: 40px;
-	filter: brightness(1);
-}
-
-.brand-logo:hover {
-	filter: brightness(1.3);
-}
-
 
 /* about us*/
 .about{
-	background-color: #090909;
-	padding: 100px 0 50px 0;
+	padding-top: 100px;
+	background-color: #121212;
+	color:#ffffff;
 }
 .about_text-container {
-	height: auto;
+	height: 400px;
 	width: 100%;
-}
-.about_text-container{
 	display: flex;
 	flex-direction: row;
 }
 .about_text-container div{
 	flex: 1;
 	width: 50%;
-	height: 500px;
 }
 .about_image-container{
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .about_image{
-	height: 100%;
+	height: 90%;
 }
-.about_text-container h2{
+.about_text-container div h2{
 	margin-top: 0.8rem;
-	font-size: 3.8rem;
-	font-weight: 500;
-	color: #ffffff;
-	margin-bottom: 10px;
-	font-family: 'Times New Roman', Times, serif;
+	font-size: 3.4rem;
+	font-weight: 300;
 	line-height: 110%;
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 }
 
 .about_text-container p{
 	font-size: 1rem;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 .about_text-container button{
 	height: 50px;
 	width: 150px;
 	border-radius: 20px;
-	border: 1px solid #ffffff;
+	border: 1px solid #000000;
 	background-color: #ffffff;
 	color: #000000 !important;
 	transition: ease-in-out 0.3s;
+	cursor: pointer;
 }
 .about_text-container button:hover{
 	transform: translateY(-5px);
-	background-color: #090909;
+	background-color: #121212;
 	color: #ffffff !important;
+	border: 1px solid #ffffff;
+
 
 }
 .about_text-container button:active{
@@ -339,33 +361,53 @@ textarea:focus-visible,
 }
 .about_stat-title{
 	font-size: 3rem;
-	font-weight: 600;
-	
+	font-weight: 500;
 }
+.about_stat-title span{
+	font-size: 2rem;
+	font-weight: 300;
+}
+
 .about_stat-desc{
 	font-size: 1rem;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 /* Services Section */
 .services {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+	background-color: #0c0c0c;
 	height: 100%;
 }
-.services-title{
+.service_row{
 	width: 100%;
-	height: auto;
-	padding-right: 100px;
+	display: flex;
+	flex-direction: row;
+	padding: 30px;
+	border-radius: 24px;
+	transition: 0.3s ease-in-out;
 }
-.services-title h2{
-	font-size: 4rem;
-	font-weight: 600;
+.service_row:hover{
+	background-color: #242424;
+	transform: translateY(-5px);
+}
+.service_title{
+	width: 60%;
+}
+.service_title h2{
+font-size: 3rem;
+font-weight: 400;
+}
+.service_title span{
+	font-weight: 400;
+}
+.service_description{
+	width: 40%;
+}
 
-}
-.services_content-container
+
 /* Portfolio section */
 .portfolio {
-	background-color: #121212;
+	background-color: #0c0c0c;
 }
 
 .portfolio_grid {
@@ -379,7 +421,7 @@ textarea:focus-visible,
 	border-radius: 8px;
 	overflow: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.074);
-	background-color: #101010;
+	background-color: #0c0c0c;
 	transition: ease-in-out 0.3s;
 }
 
@@ -425,10 +467,19 @@ p {
 }
 
 .tag {
-	background-color: #000000;
+	background-color: #ffffff;
+	color: #000;
+	border: 1px solid #000;
 	padding: 0.25rem 0.75rem;
-	border-radius: 25%;
+	border-radius: 40px;
 	font-size: 0.875rem;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.tag:hover{
+	background-color: #000000;
+	color: #ffffff;
+	border: 1px solid #ffffff;
 }
 
 .portfolio_view-more {
@@ -441,7 +492,7 @@ p {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    background-color: #131313;
+	background-color: #0c0c0c;
     display: flex;
     align-items: center;
   }
@@ -465,14 +516,171 @@ p {
     margin-right: 100px;
   }
   
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
+
+.portfolio_row{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	background-color: #0c0c0c;
+
+}
+
+.portfolio_item-img{
+	background-color: #0c0c0c;
+
+	transition: ease-in-out 0.3s;
+}
+.portfolio_row:hover .portfolio_item-img{
+	transform: translateY(-15px);
+}
+.portfolio_description-container{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+.portfolio_description-container h3{
+	width: 100%;
+	text-align: left;
+}
+
+.portfolio_card-tag{
+	width: 100%;
+}
+.portfolio_view-all-container{
+	width: 100%;
+	padding: 50px 0;
+}
+.view-all-btn{
+	background-color: #0c0c0c;
+	color: #ffffff;
+	border: 1px solid #fff;
+	border-radius: 32px;
+	padding: 15px 30px;
+	transition: 0.3s ease-in-out;
+}
+.view-all-btn:hover{
+	background-color: #ffffff;
+	color: #0c0c0c;
+	border: 1px solid #0c0c0c;
+}
+
+
+
+/* Fix images positioning */
+.img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    opacity: 0;
+}
+
+/* Make the active slide visible */
+.img.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Navigation Buttons */
+/* Navigation Buttons */
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+	border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+/* Move arrows just outside the container */
+.left { left: -60px; }
+.right { right: -60px; }
+
+.left:hover, .right:hover {
+    background: rgba(255, 255, 255, 1);
+	color: #000000;
+}
+
+/* Ensure arrows stay visible */
+.picContainer {
+    position: relative;
+    width: 900px;
+    height: 500px;
+	background-color: #0c0c0c;
+    border-radius: 10px;
+    overflow: visible; /* Allow elements to extend outside */
+    margin: auto; /* Centering */
+}
+
+/* Responsive Fix: Move arrows BELOW the carousel */
+@media screen and (max-width: 900px) {
+    .left, .right {
+        top: auto;
+        bottom: -60px; /* Move below the carousel */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
     }
-    100% {
-      transform: translateX(-100%);
+
+    .left {
+        right: 70px; /* Adjust left button */
+        left: auto;
     }
-  }
+    
+    .right {
+        left: 70px; /* Adjust right button */
+        right: auto;
+    }
+
+    .picContainer {
+        width: 100%; /* Make it fit smaller screens */
+        max-width: 90vw;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Dots Navigation */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Active dot */
+.dot.active {
+    background: #ffffff;
+    transform: scale(1.3);
+}
+
+
 
 /* Pricing Grid */
 .pricing {
@@ -776,7 +984,6 @@ textarea:not(:placeholder-shown)~label {
 
 
 @media (max-width: 950px) {
-
 	.home {
 		flex-direction: column;
 		align-items: center;
@@ -810,6 +1017,11 @@ textarea:not(:placeholder-shown)~label {
 		max-width: 80%;
 		margin-top: 20px;
 	}
+
+	.about_title-container h2 {
+		font-size: 1.6rem;
+	}
+
 
 	.about_title-container h2 {
 		font-size: 1.6rem;
