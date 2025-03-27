@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
       { src: '/assets/images/github.png', alt: 'Company 6' },
       { src: '/assets/images/azure.png', alt: 'Company 6' },
       { src: '/assets/images/stack.png', alt: 'Company 6' },
-      { src: '/assets/images/js.png', alt: 'Company 6' }
+      { src: '/assets/images/js.png', alt: 'Company 6' },
+      { src: '/assets/images/adobe.png', alt: 'Company 6' }
+
 
 
 

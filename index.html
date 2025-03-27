@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav-footer.css">
     <link rel="stylesheet" href="css/popup.css">
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="preload" as="font">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
@@ -39,7 +40,7 @@
                 <a href="about-horizon.html" class="nav-link">About</a>
                 <a href="website-portfolio.html" class="nav-link">Portfolio</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="btn btn-primary">Contact Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
             </nav>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <span class="menu-icon"></span>
@@ -66,24 +67,24 @@
         </div>
     </section>
 
-
+    <!--
     <div class="logo-carousel-container">
         <div class="logo-track">
-          <!-- Logos will be added dynamically by JavaScript -->
         </div>
     </div>
-    
+    -->
+
 
     <section class="about">
         <div class="container">
             <div class="about_text-container">
                 <div>
-                    <h2>Revolutionizing the Web, Powered by Innovation</h2>
+                    <h2>Revolutionising the Web, Powered by Innovation</h2>
                     <p>At Horizon, we craft high-performance websites that don’t just look good—they work. Our expertise in custom web design, responsive development, and SEO-driven strategies ensures your business stands out in a competitive digital world.</p>
                     <p>Whether you're a startup or an established brand, we build sleek, fast, and conversion-focused websites that turn visitors into customers. Whether you're a startup or an established brand, we build sleek, fast, and conversion-focused websites that turn visitors into customers.</p>
                 </div>
                 <div class="about_image-container">
-                    <img class="about_image" src="assets/images/about.png" alt="">
+                    <img class="about_image" src="assets/images/about.png" alt="" loading="lazy">
                 </div>
             </div>  
             <div class="about_divider"></div>
@@ -107,17 +108,14 @@
 
     <section class="services">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Explore our portfolio of successful projects and client collaborations.</p>
-            </div>
+            <h2 class="services-title">What We Offer ↓</h2>
             <div class="service_row">
                 <div class="service_title">
                     <span>[00]</span>
                     <h2>Web Design</h2>
                 </div>
                 <div class="service_description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, rem veritatis ullam explicabo beatae aperiam laudantium accusamus nobis. Quis veniam reprehenderit, esse unde eveniet molestiae labore nam tenetur repudiandae dolor.
+                    <p>Elegant, intuitive, and striking. Our designs reflect your brand’s essence while offering a flawless user experience. Every detail is thoughtfully crafted to engage visitors and elevate your digital presence.</p>
                 </div>
             </div>
             <div class="service_row">
@@ -126,25 +124,25 @@
                     <h2>Web Development</h2>
                 </div>
                 <div class="service_description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, rem veritatis ullam explicabo beatae aperiam laudantium accusamus nobis. Quis veniam reprehenderit, esse unde eveniet molestiae labore nam tenetur repudiandae dolor.
+                    <p>Crafted for speed and precision, our websites deliver seamless experiences across all devices. We focus on clean, efficient code and flawless performance, ensuring your site operates smoothly, securely, and with unmatched reliability.</p>
                 </div>
             </div>
             <div class="service_row">
                 <div class="service_title">
                     <span>[02]</span>
-                    <h2>UI/UX Design</h2>
+                    <h2>Web Hosting & Maintenance</h2>
                 </div>
                 <div class="service_description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, rem veritatis ullam explicabo beatae aperiam laudantium accusamus nobis. Quis veniam reprehenderit, esse unde eveniet molestiae labore nam tenetur repudiandae dolor.
+                    <p>Fast, secure, and always available. Our hosting ensures peak performance with constant monitoring, daily backups, and updates. We manage the technical details so you can focus on what matters most.</p>
                 </div>
             </div>
             <div class="service_row">
                 <div class="service_title">
                     <span>[03]</span>
-                    <h2>Web Hosting & Maintenance</h2>
+                    <h2>SEO & Digital Marketing</h2>
                 </div>
                 <div class="service_description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, rem veritatis ullam explicabo beatae aperiam laudantium accusamus nobis. Quis veniam reprehenderit, esse unde eveniet molestiae labore nam tenetur repudiandae dolor.
+                    <p>Drive visibility and growth. We optimize your website to rank higher and attract more traffic. With tailored SEO strategies and targeted marketing campaigns, we turn engagement into lasting results.</p>
                 </div>
             </div>
         </div>
@@ -253,28 +251,7 @@
     </section>
 
 
-        <div class="banner-container">
-            <div class="scrolling-text">
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-                <div class="text">Horizon</div>
-            </div>
-        </div>
+   
 
 
     <section id="services" class="section section-alt pricing">
@@ -351,6 +328,149 @@
         </div>
     </section>
 
+    <section class="testimonials-section">
+        <div class="container">
+          <div class="testimonials-header">
+            <h2 class="testimonials-title">What people are saying</h2>
+            
+            <div class="trustpilot-info">
+              <div class="rating-display">
+                <span class="rating-score">4.8</span>
+              </div>
+              <div class="reviews-count">
+                <span>2,453</span> reviews on 
+                <span class="trustpilot-brand">
+                  TrustPilot
+                  <svg class="trustpilot-check" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm114.9 149.1L231.8 359.6c-1.1 1.1-2.9 3.5-5.1 3.5-2.3 0-3.8-1.6-5.1-2.9-1.3-1.3-78.9-75.9-78.9-75.9l-1.5-1.5c-.6-.9-1.1-2-1.1-3.2 0-1.2.5-2.3 1.1-3.2.6-.9 1.7-1.8 2.9-1.8 1.2 0 2 .6 2.9 1.3l.2.2 74.9 72.6L352 180.6c.9-.9 2-1.1 3.2-1.1 1.2 0 2.3.5 3.2 1.1l.2.2 9.6 9.6c.8.8 1.8 1.9 1.8 3.2-.1 1.3-.9 2.4-1.9 3.2l-1.4 1.4z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+    
+          <div class="testimonials-slider">
+            <div class="testimonials-track" id="testimonialsTrack">
+              <!-- Testimonial 1 -->
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <img src="https://via.placeholder.com/80" alt="Alex Morgan" class="testimonial-avatar">
+                  <div class="testimonial-body">
+                    <div class="testimonial-stars">
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                      "This product has completely transformed how I work. The attention to detail and thoughtful design make it a joy to use every day."
+                    </blockquote>
+                    <div>
+                      <p class="testimonial-author">Alex Morgan</p>
+                      <p class="testimonial-role">Creative Director</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Testimonial 2 -->
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <img src="https://via.placeholder.com/80" alt="Sam Chen" class="testimonial-avatar">
+                  <div class="testimonial-body">
+                    <div class="testimonial-stars">
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                      "Incredible performance and beautiful design. It's rare to find a product that excels in both form and function."
+                    </blockquote>
+                    <div>
+                      <p class="testimonial-author">Sam Chen</p>
+                      <p class="testimonial-role">Product Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Testimonial 3 -->
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <img src="https://via.placeholder.com/80" alt="Taylor Reed" class="testimonial-avatar">
+                  <div class="testimonial-body">
+                    <div class="testimonial-stars">
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="star star-empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                      "The simplicity and power of this solution has helped our team achieve results we didn't think were possible."
+                    </blockquote>
+                    <div>
+                      <p class="testimonial-author">Taylor Reed</p>
+                      <p class="testimonial-role">Technology Lead</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="testimonials-nav">
+            <button class="nav-button" id="prevButton" aria-label="Previous testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            
+            <div class="nav-indicators" id="navIndicators">
+              <!-- Indicators will be added by JavaScript -->
+            </div>
+            
+            <button class="nav-button" id="nextButton" aria-label="Next testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
 
     <section class="contact" id="contact">
         <div class="contact_container">
@@ -471,6 +591,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/testimonials.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/navbar.js"></script>

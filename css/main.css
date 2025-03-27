@@ -167,7 +167,7 @@ textarea:focus-visible,
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
-	background-color: #ffffff;
+	background-color: #ffffffca;
   }
   
   .logo-track {
@@ -291,7 +291,7 @@ textarea:focus-visible,
 	color:#ffffff;
 }
 .about_text-container {
-	height: 400px;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -306,13 +306,15 @@ textarea:focus-visible,
 	align-items: center;
 	justify-content: center;
 }
-.about_image{
-	height: 90%;
+.about_image {
+    width: 80%;
+    height: auto;
 }
+
 .about_text-container div h2{
 	margin-top: 0.8rem;
-	font-size: 3.4rem;
-	font-weight: 300;
+	font-size: 3.5rem;
+	font-weight: 400;
 	line-height: 110%;
 	margin-bottom: 35px;
 }
@@ -374,18 +376,226 @@ textarea:focus-visible,
 	font-weight: 400;
 }
 
+    /* Container styles */
+    .testimonials-section {
+		width: 100%;
+		padding: 4rem 1rem;
+		background-color: #121212;
+	  }
+  
+  
+	  /* Header styles */
+	  .testimonials-header {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	  }
+  
+	  @media (min-width: 768px) {
+		.testimonials-header {
+		  flex-direction: row;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+	  }
+  
+	  .testimonials-title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #fff;
+	  }
+  
+	  .trustpilot-info {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	  }
+  
+	  .rating-display {
+		display: flex;
+		align-items: center;
+	  }
+  
+	  .rating-score {
+		color: #00b67a;
+		font-weight: 500;
+		font-size: 1.125rem;
+		margin-right: 0.5rem;
+	  }
+  
+	  .stars {
+		display: flex;
+	  }
+  
+	  .star {
+		width: 16px;
+		height: 16px;
+	  }
+  
+	  .star-filled {
+		color: #00b67a;
+		fill: #00b67a;
+	  }
+  
+	  .star-empty {
+		color: #4b5563;
+	  }
+  
+	  .reviews-count {
+		color: #9ca3af;
+		font-size: 0.875rem;
+		border-left: 1px solid #1f2937;
+		padding-left: 0.75rem;
+	  }
+  
+	  .reviews-count span {
+		color: #fff;
+	  }
+  
+	  .trustpilot-brand {
+		color: #00b67a;
+		display: inline-flex;
+		align-items: center;
+	  }
+  
+	  .trustpilot-check {
+		width: 12px;
+		height: 12px;
+		margin-left: 4px;
+	  }
+  
+	  /* Testimonials slider */
+	  .testimonials-slider {
+		position: relative;
+		overflow: hidden;
+	  }
+  
+	  .testimonials-track {
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	  }
+  
+	  .testimonial {
+		flex: 0 0 100%;
+		padding: 0 1rem;
+	  }
+  
+	  .testimonial-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		border-top: 1px solid #1f2937;
+		padding-top: 2rem;
+	  }
+  
+	  @media (min-width: 768px) {
+		.testimonial-content {
+		  flex-direction: row;
+		  align-items: flex-start;
+		}
+	  }
+  
+	  .testimonial-avatar {
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 9999px;
+		object-fit: cover;
+		flex-shrink: 0;
+	  }
+  
+	  .testimonial-body {
+		flex: 1;
+	  }
+  
+	  .testimonial-stars {
+		display: flex;
+		margin-bottom: 0.75rem;
+	  }
+  
+	  .testimonial-quote {
+		font-size: 1.25rem;
+		font-weight: 300;
+		color: #e5e7eb;
+		margin-bottom: 1rem;
+	  }
+  
+	  .testimonial-author {
+		font-weight: 500;
+		color: #fff;
+	  }
+  
+	  .testimonial-role {
+		font-size: 0.875rem;
+		color: #9ca3af;
+	  }
+  
+	  /* Navigation */
+	  .testimonials-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 2rem;
+	  }
+  
+	  .nav-button {
+		background: none;
+		border: none;
+		color: #9ca3af;
+		cursor: pointer;
+		transition: color 0.2s;
+	  }
+  
+	  .nav-button:hover {
+		color: #fff;
+	  }
+  
+	  .nav-button svg {
+		width: 20px;
+		height: 20px;
+	  }
+  
+	  .nav-indicators {
+		display: flex;
+		gap: 4px;
+	  }
+  
+	  .nav-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #4b5563;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		transition: background-color 0.2s;
+	  }
+  
+	  .nav-dot.active {
+		background-color: #00b67a;
+	  }
+
 /* Services Section */
 .services {
-	background-color: #0c0c0c;
+	background-color: #121212;
+	padding-top: 50px;
 	height: 100%;
+}
+.services-title{
+
+	margin-bottom: 30px;
 }
 .service_row{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	padding: 30px;
-	border-radius: 24px;
+	border-radius: 4px;
 	transition: 0.3s ease-in-out;
+	background-color: #3e3e3e45;
+	border: 1px solid #00000035;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.369);
+	margin-bottom: 10px;
 }
 .service_row:hover{
 	background-color: #242424;
@@ -625,24 +835,26 @@ p {
 
 /* Responsive Fix: Move arrows BELOW the carousel */
 @media screen and (max-width: 900px) {
-    .left, .right {
-        top: auto;
-        bottom: -60px; /* Move below the carousel */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 40px;
-    }
-
-    .left {
-        right: 70px; /* Adjust left button */
-        left: auto;
-    }
-    
-    .right {
-        left: 70px; /* Adjust right button */
-        right: auto;
-    }
+	.left, .right {
+		top: auto;
+		bottom: -60px; /* Move below the carousel */
+		position: absolute; /* Ensure they're positioned relative to the parent */
+		width: 40px;
+		height: 40px;
+		transform: translateY(0); /* Reset any vertical transform */
+	}
+	
+	.left {
+		left: 5%; /* Adjust this value to position the left arrow */
+	}
+	
+	.right {
+		right: 5%; /* Adjust this value to position the right arrow */
+	}
+	
+	.portfolio_view-all-container{
+		margin-top: 30px;
+	}
 
     .picContainer {
         width: 100%; /* Make it fit smaller screens */
@@ -685,7 +897,7 @@ p {
 
 /* Pricing Grid */
 .pricing {
-	background-color: #0c0c0c;
+		background-color: #121212;
 }
 
 .pricing_grid {
@@ -696,9 +908,12 @@ p {
 
 .pricing_card {
 	border-radius: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.074);
-  box-shadow: 0 10px 30px rgba(85, 96, 252, 0.1);
-	background-color: #000000;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(150deg, rgba(135, 135, 135, 0.104) 40%, rgba(187, 185, 255, 0.2) 110%);
+	border-radius: 16px;
+	backdrop-filter: blur(5px);
+	display: block;
+	box-sizing: border-box;
 	position: relative;
 	height: 100%;
 	display: flex;
@@ -989,7 +1204,8 @@ textarea:not(:placeholder-shown)~label {
 		flex-direction: column;
 		align-items: center;
 		height: auto;
-		padding: 125px 0 0 0;
+		padding: 100px 0 0 0;
+		height: 100vh;
 	}
 
 	.home_text-container,
@@ -1016,11 +1232,18 @@ textarea:not(:placeholder-shown)~label {
 	.home_earth {
 		order: 1;
 		max-width: 80%;
-		margin-top: 20px;
+		margin: 0 0 40px 0;
 	}
 
 	.about_title-container h2 {
 		font-size: 1.6rem;
+	}
+	.about_image-container{
+		margin-top: 100px;
+	}
+
+	.dots {
+		bottom: -46px; /* Increased bottom value to move the dots down */
 	}
 
 
@@ -1031,6 +1254,18 @@ textarea:not(:placeholder-shown)~label {
 	.about_desc-container p{
 		font-size: 1rem;
 	}
+
+	.service_description{
+		width: 50%;
+		float: right;
+	}
+	.service_title{
+		width: 50%;
+	}
+	.service_title h2{
+		font-size: 1.8rem;
+	}
+
 
 	.pricing_grid {
 		display: grid;
@@ -1043,11 +1278,20 @@ textarea:not(:placeholder-shown)~label {
 		margin: 0;
 	}
 
-	.portfolio_grid{
-		grid-template-columns: repeat(1, 1fr);
+	.portfolio_row{
+		flex-direction: column;
 	}
 }
 @media (max-width: 768px) {
+	.about_text-container {
+		flex-direction: column;
+	}
+	.about_text-container div{
+		width: 100%;
+	}
+	.about_image-container{
+		margin-top: 30px;
+	}
 	.section-header h2 {
 		font-size: 2.5rem;
 	}
