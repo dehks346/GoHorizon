@@ -18,7 +18,7 @@ function checkPopup() {
 
     if (lastDismissed) {
         let timePassed = (Date.now() - lastDismissed) / (1000 * 60 * 60); // Convert to hours
-        if (timePassed < 1) {
+        if (timePassed < 2) {
             return; // Less than 2 hours, don't show the popup
         }
     }

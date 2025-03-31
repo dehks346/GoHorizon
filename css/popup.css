@@ -1,190 +1,190 @@
-/* Overlay */
+/* Overlay - More refined dark overlay */
 .popup__overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Slightly darker for a luxury feel */
+    background: rgba(0, 0, 0, 0.7);
     display: none;
-    z-index: 1000000001;
+    z-index: 1000;
     animation: fadeIn 0.3s ease-out;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    color: #000000;
-
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-/* Popup Box */
+/* Popup Box - More minimalist and premium */
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Increased width for better balance */
-    max-width: 460px;
+    width: 90%;
+    max-width: 400px;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     text-align: center;
     display: none;
-    z-index: 10000000001;
-    border: none; /* No border for sleekness */
-    font-family: 'Inter', sans-serif; /* Modern, clean font */
-    animation: popupFadeIn 0.4s ease-out;
-    
+    z-index: 1001;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    animation: popupFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
 }
+
 .popup::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: linear-gradient(90deg, #007aff, #5ac8fa);
-    border-radius: 20px;
 }
 
-        /* Close button */
-        .popup-close {
-            width: 30px;
-            height: 30px;
-            color: #343434;
-            border-radius: 50%;
-            background-color: #00000029;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-        .popup-eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 12px;
-            font-weight: 500;
-            color: #007aff;
-            margin-bottom: 10px;
-        }
+.popup-content {
+    position: relative;
+    z-index: 2;
+}
 
-        .popup-title {
-            font-size: 32px;
-            font-weight: 600;
-            margin: 0 0 10px;
-            letter-spacing: -0.5px;
-            line-height: 1.1;
-        }
+/* Close button - More subtle */
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    color: #666;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
 
-        .popup-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            color: #86868b;
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
+.popup-close:hover {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.05);
+}
 
-        /* Highlight for the discount */
-        .discount-highlight {
-            display: inline-block;
-            font-size: 48px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin: 20px 0;
-            letter-spacing: -1px;
-            position: relative;
-        }
+.popup-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #007aff;
+    margin-bottom: 12px;
+}
 
-        .discount-highlight::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            border-radius: 3px;
-            transform: scaleX(0.7);
-            opacity: 0.7;
-        }
+.popup-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #111;
+}
 
-        .popup-details {
-            font-size: 14px;
-            color: #86868b;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
+.popup-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
 
-        /* Premium button */
-        .popup-button {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            letter-spacing: 0.2px;
-            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
-        }
+/* Discount highlight - More refined */
+.discount-highlight {
+    display: inline-block;
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    margin: 16px 0 24px;
+    letter-spacing: -1px;
+    position: relative;
+    padding: 0 8px;
+}
 
-        .popup-button:hover {
-            background-color: #0062cc;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
-        }
+.discount-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 8px;
+    background: linear-gradient(90deg, rgba(0, 122, 255, 0.2), rgba(90, 200, 250, 0.2));
+    border-radius: 4px;
+    z-index: -1;
+}
 
-        /* Subtle geometric accent */
-        .geometric-accent {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 122, 255, 0.05) 0%, rgba(90, 200, 250, 0.05) 100%);
-            top: -100px;
-            right: -100px;
-            z-index: -1;
-        }
+.popup-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
 
-        .geometric-accent:nth-child(2) {
-            width: 150px;
-            height: 150px;
-            bottom: -75px;
-            left: -75px;
-            top: auto;
-            right: auto;
-        }
+/* Button - More refined gradient and animation */
+.popup-button {
+    background: linear-gradient(90deg, #007aff, #5ac8fa);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15);
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+.popup-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 122, 255, 0.25);
+}
 
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        /* Hide popup with JavaScript */
-        .hidden {
-            display: none;
-        }
+@keyframes popupFadeIn {
+    from { 
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
 
-        /* Responsive adjustments */
-        @media (max-width: 480px) {
-            .popup {
-                padding: 30px 20px;
-            }
-            
-            .discount-highlight {
-                font-size: 40px;
-            }
-            
-            .popup-title {
-                font-size: 28px;
-            }
-        }
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .popup {
+        padding: 32px 24px;
+        max-width: 90%;
+    }
+    
+    .discount-highlight {
+        font-size: 36px;
+    }
+    
+    .popup-title {
+        font-size: 24px;
+    }
+    
+    .popup-subtitle {
+        font-size: 15px;
+    }
+}
