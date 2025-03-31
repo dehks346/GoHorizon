@@ -1,24 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
-
-html {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
-	font-size: 16px;
-}
-
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-size: 16px;
+}
 input,
 button,
 textarea {
 	padding: 0;
 	margin: 0;
 }
-
 body {
 	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	;
@@ -29,60 +25,42 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 a {
 	text-decoration: none;
 	cursor: pointer;
 }
-
 h1 {
 	font-size: 4rem;
 	font-weight: 800;
 }
-
 h2 {
 	font-size: 1.9rem;
 	font-weight: 700;
 }
-
 h3 {
 	font-size: 1.3rem;
 	font-weight: 600;
 }
-
 h4 {
 	font-size: 1.1rem;
 	font-weight: 400;
 }
-
 h5 {
 	font-size: 1rem;
 	font-weight: 300;
 }
-
 p {
 	font-size: 0.8rem;
 	font-weight: 200;
 }
-
-
-
 .flex-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-.flex-column {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .transition {
 	transition: 0.3s ease-in-out;
 }
-
 .container {
 	width: 100%;
 	max-width: 1280px;
@@ -90,31 +68,38 @@ p {
 	padding: 0 2rem 50px 2rem;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
 
-.section-header {
-	padding-top: 50px;
-	margin-bottom: 3rem;
-	text-align: center;
+/* banner */
+.deal{
+	background: rgb(232,209,153);
+	background: linear-gradient(90deg, rgba(232,209,153,1) 0%, rgba(241,228,191,1) 50%, rgba(232,209,153,1) 100%);	position: absolute;
+	height: 40px;
+	width: 100vw;
 }
-
-.section-header h2 {
-	font-size: 3.5rem;
+.deal h4{
+	font-size: 0.75rem;
+	color: #000000;
 	font-weight: 500;
-	margin-bottom: 0.5rem;
+}
+.deal span{
+	font-weight: bold;
+}
+.deal a{
+	background-color: #000;
+	border-radius: 12px;
+	color: #fff !important;
+	padding: 5px 7px;
+	margin-left: 10px;
+	transition: 0.3s ease-in-out;
+}
+.deal a:hover{
+	color: #000000 !important;
+	background-color: #fff;
 }
 
-.section-header p {
-	font-size: 1.2rem;
-	font-weight: 300;
-	margin: 0 auto;
-}
 
 
+/* Home section */
 @keyframes move-twink-back {
 	from {
 		background-position: 0 0;
@@ -124,46 +109,7 @@ img {
 		background-position: -10000px 5000px;
 	}
 }
-
-.logo-carousel-container {
-	width: 100%;
-	max-width: 100%;
-	overflow: hidden;
-	position: relative;
-	margin: 0 auto;
-	background-color: #181818ca;
-  }
-  
-  .logo-track {
-	display: flex;
-	width: max-content;
-  }
-  
-  .logo-slide {
-	display: flex;
-	align-items: center;
-  }
-  .logo-item {
-	flex: 0 0 auto;
-	width: 150px; /* Fixed width */
-	height: 80px; /* Fixed height */
-	padding: 0 15px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden; /* Prevents overflow issues */
-
-  }
-  
-  .logo-item img {
-	width: 100%; /* Ensures the image takes full width */
-	height: auto; /* Keeps the aspect ratio */
-	max-width: 80%; /* Prevents the image from exceeding the container */
-	max-height: 80%; /* Ensures the image does not overflow */
-	object-fit: contain; /* Maintains aspect ratio without stretching */
-  }
-
-  .stars {
+.stars {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -172,7 +118,6 @@ img {
 	background: #000 url('../assets/images/stars.png') repeat;
 	z-index: -2;
 }
-
 .twinkling {
 	position: fixed;
 	top: 0;
@@ -183,18 +128,6 @@ img {
 	z-index: -1;
 	animation: move-twink-back 200s linear infinite;
 }
-
-@keyframes move-twink-back {
-	from {
-		background-position: 0 0;
-	}
-
-	to {
-		background-position: -10000px 5000px;
-	}
-}
-  
-/* Home section */
 .home {
 	height: 100vh;
 	width: 100vw;
@@ -250,6 +183,41 @@ img {
 }
 
 
+/* Carousel */
+.logo-carousel-container {
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	background-color: #181818ca;
+}
+.logo-track {
+	display: flex;
+	width: max-content;
+}
+.logo-slide {
+	display: flex;
+	align-items: center;
+}
+.logo-item {
+	flex: 0 0 auto;
+	width: 150px;
+	height: 80px;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.logo-item img {
+	width: 100%;
+	height: auto;
+	max-width: 80%;
+	max-height: 80%; 
+	object-fit: contain; 
+}
+
 
 /* about us*/
 .about{
@@ -294,27 +262,6 @@ img {
 	margin-bottom: 10px;
 }
 
-.about_text-container button{
-	height: 50px;
-	width: 150px;
-	border-radius: 20px;
-	border: 1px solid #000000;
-	background-color: #ffffff;
-	color: #000000 !important;
-	transition: ease-in-out 0.3s;
-	cursor: pointer;
-}
-.about_text-container button:hover{
-	transform: translateY(-5px);
-	background-color: #121212;
-	color: #ffffff !important;
-	border: 1px solid #ffffff;
-
-
-}
-.about_text-container button:active{
-	transform: translateY(0px);
-}
 .about_divider{
 	width: 100%;
 	height: 1px;
@@ -327,7 +274,6 @@ img {
     gap: 1rem;
     justify-content: center;
 }
-
 .about_stat-card {
     max-width: 100%;
 	display: flex;
@@ -355,204 +301,7 @@ img {
 	font-weight: 400;
 }
 
-    /* Container styles */
-    .testimonials-section {
-		width: 100%;
-		padding: 4rem 1rem;
-		background-color: #121212;
-	  }
-  
-  
-	  /* Header styles */
-	  .testimonials-header {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		margin-bottom: 3rem;
-	  }
-  
-	  @media (min-width: 768px) {
-		.testimonials-header {
-		  flex-direction: row;
-		  justify-content: space-between;
-		  align-items: center;
-		}
-	  }
-  
-	  .testimonials-title {
-		font-size: 2.3rem;
-		font-weight: 300;
-		color: #fff;
-	  }
-  
-	  .trustpilot-info {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-	  }
-  
-	  .rating-display {
-		display: flex;
-		align-items: center;
-	  }
-  
-	  .rating-score {
-		color: #00b67a;
-		font-weight: 500;
-		font-size: 1.125rem;
-		margin-right: 0.5rem;
-	  }
-  
-	  .stars {
-		display: flex;
-	  }
-  
-	  .star {
-		width: 16px;
-		height: 16px;
-	  }
-  
-	  .star-filled {
-		color: #00b67a;
-		fill: #00b67a;
-	  }
-  
-	  .star-empty {
-		color: #4b5563;
-	  }
-  
-	  .reviews-count {
-		color: #9ca3af;
-		font-size: 0.875rem;
-		border-left: 1px solid #1f2937;
-		padding-left: 0.75rem;
-	  }
-  
-	  .reviews-count span {
-		color: #fff;
-	  }
-  
-	  .trustpilot-brand {
-		color: #00b67a;
-		display: inline-flex;
-		align-items: center;
-	  }
-  
-	  .trustpilot-check {
-		width: 12px;
-		height: 12px;
-		margin-left: 4px;
-	  }
-  
-	  /* Testimonials slider */
-	  .testimonials-slider {
-		position: relative;
-		overflow: hidden;
-	  }
-  
-	  .testimonials-track {
-		display: flex;
-		transition: transform 0.5s ease-in-out;
-	  }
-  
-	  .testimonial {
-		flex: 0 0 100%;
-		padding: 0 1rem;
-	  }
-  
-	  .testimonial-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		border-top: 1px solid #1f2937;
-		padding-top: 2rem;
-	  }
-  
-	  @media (min-width: 768px) {
-		.testimonial-content {
-		  flex-direction: row;
-		  align-items: flex-start;
-		}
-	  }
-  
-	  .testimonial-avatar {
-		width: 3.5rem;
-		height: 3.5rem;
-		border-radius: 9999px;
-		object-fit: cover;
-		flex-shrink: 0;
-	  }
-  
-	  .testimonial-body {
-		flex: 1;
-	  }
-  
-	  .testimonial-stars {
-		display: flex;
-		margin-bottom: 0.75rem;
-	  }
-  
-	  .testimonial-quote {
-		font-size: 1.25rem;
-		font-weight: 300;
-		color: #e5e7eb;
-		margin-bottom: 1rem;
-	  }
-  
-	  .testimonial-author {
-		font-weight: 500;
-		color: #fff;
-	  }
-  
-	  .testimonial-role {
-		font-size: 0.875rem;
-		color: #9ca3af;
-	  }
-  
-	  /* Navigation */
-	  .testimonials-nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 2rem;
-	  }
-  
-	  .nav-button {
-		background: none;
-		border: none;
-		color: #9ca3af;
-		cursor: pointer;
-		transition: color 0.2s;
-	  }
-  
-	  .nav-button:hover {
-		color: #fff;
-	  }
-  
-	  .nav-button svg {
-		width: 20px;
-		height: 20px;
-	  }
-  
-	  .nav-indicators {
-		display: flex;
-		gap: 4px;
-	  }
-  
-	  .nav-dot {
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-		background-color: #4b5563;
-		border: none;
-		padding: 0;
-		cursor: pointer;
-		transition: background-color 0.2s;
-	  }
-  
-	  .nav-dot.active {
-		background-color: #00b67a;
-	  }
+
 
 /* Services Section */
 .services {
@@ -601,19 +350,81 @@ font-weight: 400;
 	height: auto;
 	background-color: #121212;
 }
+.portfolio_grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.portfolio_item {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Helps contain child elements */
+}
+.portfolio_divider {
+    background-color: #ffffff54;
+    height: 2px;
+    width: 100%;
+    margin: 20px auto;
+    transition: 0.3s ease-in-out;
+}
+.portfolio_item h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.portfolio_item:hover .portfolio_divider {
+    background-color: #ffffff;
+}
+.portfolio_img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center; 
+}
+.portfolio_img_container {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+.portfolio_item:hover .portfolio_img {
+    transform: scale(1.15);
+}
+.portfolio_item:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.portfolio_title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.view-all-btn{
+	margin-top: 50px;
+	text-align: center;
+	color: white;
+	border: 1px solid #ffffff;
+	padding: 15px 30px;
+	border-radius: 24px;
+	transition: 0.2s ease-in-out;
+}
+.view-all-btn:hover{
+	color: #000000;
+	background-color: #ffffff;
+	border-color: 1px solid #000000;
+}
+
 
 /* Pricing Grid */
 .pricing {
 		background-color: #121212;
 }
-
 .pricing_grid {
 	margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
 }
-
 .pricing_card {
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -628,15 +439,12 @@ font-weight: 400;
 	flex-direction: column;
 	transition: ease-in-out 0.3s;
 }
-
 .pricing_card:hover {
 	transform: translateY(-15px);
 }
-
 .pricing_popular {
 	border-color: grey;
 }
-
 .pricing_popular-badge {
 	position: absolute;
 	top: 0;
@@ -649,24 +457,18 @@ font-weight: 400;
 	border-bottom-left-radius: 16px;
 	border-top-right-radius: 16px;
 }
-
 .pricing_card-header {
 	padding: 1.5rem 1.5rem 0 1.5rem;
 	border-bottom: 1px solid var(--border);
 }
-
-
-
 .pricing_price-container {
 	display: flex;
 	align-items: baseline;
 }
-
 .pricing_price {
 	font-size: 2.5rem;
 	font-weight: 500;
 }
-
 .pricing_pricing-period {
     font-size: 14px;
     color: #71717a;
@@ -683,20 +485,17 @@ font-weight: 400;
 	margin: 24px auto;
 	background-color: rgb(129, 129, 129);
 }
-
 .pricing_card-features {
 	padding: 1.5rem;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 }
-
 .pricing_card-features ul {
 	list-style: none;
 	margin-bottom: 1.5rem;
 	flex: 1;
 }
-
 .pricing_card-features li {
 	margin-bottom: 0.75rem;
 	display: flex;
@@ -719,7 +518,6 @@ font-weight: 400;
 	border-radius: 9999px;
 	margin-bottom: 16px;
 }
-
 .pricing-btn {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: linear-gradient(150deg, rgba(135, 135, 135, 0.104) 40%, rgba(187, 185, 255, 0.2) 110%);
@@ -736,11 +534,9 @@ font-weight: 400;
 	color: #ffffff;
 	border: 1px solid #ffffff;
 }
-/* Starter Button */
 .pricing-btn-starter {
     background: linear-gradient(150deg, rgba(255, 92, 92, 0.1) 40%, rgba(255, 174, 174, 0.4) 110%);
 }
-
 .pricing-btn-starter:hover {
     background: linear-gradient(150deg, rgba(255, 92, 92, 0.2) 40%, rgba(255, 174, 174, 0.6) 110%);
     transform: translateY(-4px);
@@ -748,17 +544,13 @@ font-weight: 400;
 .pricing-btn-growth {
     background: linear-gradient(150deg, rgba(63, 94, 251, 0.1) 40%, rgba(252, 70, 107, 0.4) 110%);
 }
-
 .pricing-btn-growth:hover {
     background: linear-gradient(150deg, rgba(63, 94, 251, 0.2) 40%, rgba(252, 70, 107, 0.6) 110%);
     transform: translateY(-4px);
 }
-
-/* Enterprise Button */
 .pricing-btn-enterprise {
     background: linear-gradient(150deg, rgba(0, 204, 255, 0.1) 40%, rgba(0, 179, 255, 0.4) 110%);
 }
-
 .pricing-btn-enterprise:hover {
     background: linear-gradient(150deg, rgba(0, 204, 255, 0.2) 40%, rgba(0, 179, 255, 0.6) 110%);
     transform: translateY(-4px);
@@ -777,8 +569,6 @@ font-weight: 400;
     -webkit-mask-size: contain;
     mask-size: contain;
 }
-
-/* Add 3D Glassmorphic Badge Behind */
 .check-icon::before {
     content: '';
     position: absolute;
@@ -793,22 +583,15 @@ font-weight: 400;
     transform: translate(2px, 2px); /* Slight offset for 3D effect */
     z-index: -1; /* Ensures the badge stays behind the checkmark */
 }
-
-
-
 .check-icon-starter {
     background-image: linear-gradient(150deg, rgba(255, 92, 92, 0.05) 40%, rgba(255, 174, 174, 0.3) 110%);
 }
-
 .check-icon-growth {
     background-image: linear-gradient(150deg, rgba(63, 94, 251, 0.05) 40%, rgba(252, 70, 107, 0.3) 110%);
 }
-
 .check-icon-enterprise {
     background-image: linear-gradient(150deg, rgba(0, 204, 255, 0.05) 40%, rgba(0, 179, 255, 0.3) 110%);
 }
-
-
 .pricing_features .btn {
 	width: 100%;
 	margin-top: auto;
@@ -827,7 +610,6 @@ font-weight: 400;
 	background-color: #191919;
 	border-radius: 8px;
 }
-
 .contact_grid {
 	display: flex;
 	flex-direction: row;
@@ -835,32 +617,25 @@ font-weight: 400;
 	overflow: hidden;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
-
 /* Form Column */
 .contact_form-container {
 	padding: 60px 40px;
 	flex: 1;
 }
-
-
 .contact_form-header {
 	margin-bottom: 40px;
 }
-
 .ctonact_form-header h2 {
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 12px;
 	letter-spacing: -0.02em;
 }
-
 .contact_form-header p {
 	font-size: 17px;
 	color: #c1c1c1;
 	max-width: 400px;
 }
-
-/* Form Styling - Apple-like */
 .contact_form-input {
 	position: relative;
 	margin-bottom: 24px;
@@ -877,18 +652,15 @@ font-weight: 400;
 	padding: 40px;
 	color: #ffffff;
 }
-
 .promo-content h3 {
 	font-size: 28px;
 	font-weight: 600;
 	margin-bottom: 12px;
 }
-
 .promo-content p {
 	font-size: 17px;
 	opacity: 0.9;
 }
-
 input:focus-visible,
 textarea:focus-visible,
 .submit-button:focus-visible,
@@ -913,13 +685,11 @@ textarea {
 	min-height: 120px;
 	resize: none;
 }
-
 input:focus,
 textarea:focus {
 	outline: none;
 	border-color: #0071e3;
 }
-
 label {
 	position: absolute;
 	left: 0;
@@ -929,7 +699,6 @@ label {
 	pointer-events: none;
 	transition: all 0.3s ease;
 }
-
 input:focus~label,
 textarea:focus~label,
 input:not(:placeholder-shown)~label,
@@ -938,7 +707,6 @@ textarea:not(:placeholder-shown)~label {
 	font-size: 12px;
 	color: #0071e3;
 }
-
 .contact_submit-btn {
 	display: inline-block;
 	padding: 12px 24px;
@@ -954,17 +722,14 @@ textarea:not(:placeholder-shown)~label {
 	transition: all 0.3s ease;
 	margin-top: 16px;
 }
-
 .contact_submit-btn:hover {
 	background-color: #0077ed;
 	transform: translateY(-3px);
 }
-
 .contact_submit-btn:active {
 	background-color: #0068d1;
 	transform: translateY(0);
 }
-
 /* Content Column */
 .contact_content-section {
 	padding: 60px 40px;
@@ -973,11 +738,9 @@ textarea:not(:placeholder-shown)~label {
 	justify-content: center;
 	flex: 1;
 }
-
 .contact_content-wrapper {
 	max-width: 400px;
 }
-
 .contact_content_title {
 	font-size: 48px;
 	font-weight: 600;
@@ -986,24 +749,19 @@ textarea:not(:placeholder-shown)~label {
 	margin-bottom: 24px;
 	color: #ffffff;
 }
-
-
 .contact_content-description {
 	font-size: 19px;
 	color: #c1c1c1;
 	margin-bottom: 40px;
 	line-height: 1.5;
 }
-
 /* Contact Info */
 .contact_contact-info {
 	margin-bottom: 40px;
 }
-
 .contact_contact-item {
 	margin-bottom: 16px;
 }
-
 .contact_contact-label {
 	font-size: 12px;
 	text-transform: uppercase;
@@ -1012,14 +770,12 @@ textarea:not(:placeholder-shown)~label {
 
 	margin-bottom: 4px;
 }
-
 .contact-link {
 	font-size: 19px;
 	color: #c1c1c1;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
-
 .contact-link:hover {
 	color: #0071e3;
 }
@@ -1109,8 +865,21 @@ textarea:not(:placeholder-shown)~label {
 		margin: 0;
 	}
 
-	.portfolio_row{
+	.portfolio_grid{
 		flex-direction: column;
+	}
+	.about_stats-container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.about_stat-img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.about_stat-card{
+		text-align: center;
+		margin-bottom: 20px;
 	}
 
 }
@@ -1158,128 +927,4 @@ textarea:not(:placeholder-shown)~label {
 		padding: 0;
 		margin: 0;
 	}
-}
-
-
-
-.portfolio_grid {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.portfolio_item {
-    margin-bottom: 30px;
-    transition: transform 0.3s ease-in-out;
-    position: relative; /* Helps contain child elements */
-}
-
-.portfolio_divider {
-    background-color: #ffffff54;
-    height: 2px;
-    width: 100%;
-    margin: 20px auto;
-    transition: 0.3s ease-in-out;
-}
-
-.portfolio_item h3 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.portfolio_item:hover .portfolio_divider {
-    background-color: #ffffff;
-}
-
-/* Fix for the image zoom effect */
-.portfolio_img {
-    width: 100%; /* Ensures image fills container */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes extra space below image */
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center; /* Zooms from center */
-}
-
-/* Container to prevent overflow */
-.portfolio_img_container {
-    overflow: hidden; /* Clips zoomed-in parts */
-    display: block; /* Ensures proper sizing */
-    width: 100%; /* Takes full width of parent */
-}
-
-.portfolio_item:hover .portfolio_img {
-    transform: scale(1.15); /* Zoom effect */
-}
-
-.portfolio_item:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
-}
-
-.portfolio_title {
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 50px;
-    font-weight: 400;
-}
-.view-all-btn{
-	margin-top: 50px;
-	text-align: center;
-	color: white;
-	border: 1px solid #ffffff;
-	padding: 15px 30px;
-	border-radius: 24px;
-	transition: 0.2s ease-in-out;
-}
-.view-all-btn:hover{
-	color: #000000;
-	background-color: #ffffff;
-	border-color: 1px solid #000000;
-}
-
-@media (max-width: 950px) {
-	.portfolio_grid{
-		flex-direction: column;
-	}
-	.about_stats-container {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-	}
-	.about_stat-img{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.about_stat-card{
-		text-align: center;
-		margin-bottom: 20px;
-	}
-}
-
-
-.deal{
-	background: rgb(232,209,153);
-	background: linear-gradient(90deg, rgba(232,209,153,1) 0%, rgba(241,228,191,1) 50%, rgba(232,209,153,1) 100%);	position: absolute;
-	height: 40px;
-	width: 100vw;
-}
-.deal h4{
-	font-size: 0.75rem;
-	color: #000000;
-	font-weight: 500;
-}
-.deal span{
-	font-weight: bold;
-}
-.deal a{
-	background-color: #000;
-	border-radius: 12px;
-	color: #fff !important;
-	padding: 5px 7px;
-	margin-left: 10px;
-	transition: 0.3s ease-in-out;
-}
-.deal a:hover{
-	color: #000000 !important;
-	background-color: #fff;
 }
