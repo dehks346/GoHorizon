@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 <body>
+    <div class="deal flex-center">
+        <h4>
+            <span>50% OFF ALL SERVICES</span> - Launch Offer
+            <a href="#pricing" onclick="event.preventDefault(); document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });">
+                View Pricing
+            </a>
+        </h4>
+    </div>
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div class="popup__overlay" id="popupOverlay">
@@ -67,12 +75,10 @@
         </div>
     </section>
 
-    <!--
     <div class="logo-carousel-container">
         <div class="logo-track">
         </div>
     </div>
-    -->
 
     <section class="about">
         <div class="container">
@@ -83,29 +89,41 @@
                     <p>Whether you're a startup or an established brand, we build sleek, fast, and conversion-focused websites that turn visitors into customers. Our tailored approach ensures every website is designed to engage, perform, and drive real results for your business.</p>
                 </div>
                 <div class="about_image-container">
-                    <img class="about_image" src="assets/images/about.png" alt="" loading="lazy">
+                    <!--<img class="about_image" src="assets/images/about.png" alt="" loading="lazy">-->
+                    <video autoplay muted loop class="about_video">
+                        <source src="assets/images/roboto.mov">
+                    </video>
                 </div>
             </div>  
             <div class="about_divider"></div>
             <div class="about_stats-container">
                 <div class="about_stat-card">
-                    <div class="about_stat-title">100<span>%</span></div>
-                    <div class="about_stat-desc">Client satisfaction</div>
+                    <div class="flex-center">
+                        <img src="assets/images/support.png" alt="">
+                    </div>
+                    <h3>24/7 Emergency Support</h3>
+                    <p>Always there when you need us. Get immediate assistance, no matter the time.</p>
                 </div>
                 <div class="about_stat-card">
-                    <div class="about_stat-title">7<span>+</span></div>
-                    <div class="about_stat-desc">Years of expertise</div>
+                    <div class="flex-center">
+                        <img src="assets/images/mockup.png" alt="">
+                    </div>
+                    <h3>Free Mockup Before You Commit</h3>
+                    <p>Get a personalized homepage design preview before making any decisions. No commitment, no surprises.</p>
                 </div>
                 <div class="about_stat-card">
-                    <div class="about_stat-title">8<span>+</span></div>
-                    <div class="about_stat-desc">Projects launched</div>
+                    <div class="flex-center">
+                        <img src="assets/images/money.png" alt="">
+                    </div>
+                    <h3>No Hidden Costs</h3>
+                    <p>Transparent pricing with flexible contracts, ensuring you get the best value for your investment.</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 class="services-title">What We Offer ↓</h2>
             <div class="service_row">
@@ -150,110 +168,46 @@
 
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="section-header">
-                <h2>Featured Work</h2>
-                <p>Explore our portfolio of successful projects and client collaborations.</p>
+            <h2 class="portfolio_title">Featured Projects</h2>
+            <div class="portfolio_grid">
+                <div class="portfolio_item">
+                    <div class="portfolio_img_container">
+                        <img src="assets/images/anna-portfolio.png" class="portfolio_img" alt="">
+                    </div>
+                    <div class="portfolio_divider"></div>
+                    <h3>Anna Cordone</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis rerum praesentium temporibus optio soluta quidem nihil iusto ullam esse eligendi, nostrum veritatis. Provident modi ratione vitae sequi error, consequuntur laboriosam!</p>
+                </div>
+                <div class="portfolio_item">
+                    <div class="portfolio_img_container">
+                        <img src="assets/images/apex-portfolio.png" class="portfolio_img" alt="">
+                    </div>
+                    <div class="portfolio_divider"></div>
+                    <h3>Apex Roofing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis rerum praesentium temporibus optio soluta quidem nihil iusto ullam esse eligendi, nostrum veritatis. Provident modi ratione vitae sequi error, consequuntur laboriosam!</p>
+                </div>
             </div>
-                <div class="picContainer">
-                    <div id="info"></div>
-                
-                    <!-- Image slides -->
-                    <div id="image1" class="img">
-                        <div class="portfolio_row">
-                            <div class="portfolio_item-img-container flex-center">
-                                <img src="/assets/images/aetheris-shift.png" class="portfolio_item-img" alt="Aetheris Project">
-                            </div>
-                            <div class="portfolio_description-container flex-center">
-                                <h3>Aetheris</h3>
-                                <p>Aetheris is a cutting-edge healthcare solutions platform revolutionizing the medicinal industry. 
-                                   We designed a modern, user-friendly website that reflects their innovative approach.</p>                    
-                                <div class="portfolio_card-tag">
-                                    <span class="tag">Figma</span>
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="portfolio_grid">
+                <div class="portfolio_item">
+                    <div class="portfolio_img_container">
+                        <img src="assets/images/ivory-portfolio.png" class="portfolio_img" alt="">
                     </div>
-                    
-                    <div id="image2" class="img">
-                        <div class="portfolio_row">
-                            <div class="portfolio_item-img-container flex-center">
-                                <img src="/assets/images/anna-cordone-2-shift.png" class="portfolio_item-img" alt="Aetheris Project">
-                            </div>
-                            <div class="portfolio_description-container flex-center">
-                                <h3>Anna Cordone</h3>
-                                <p>Aetheris is a cutting-edge healthcare solutions platform revolutionizing the medicinal industry. 
-                                   We designed a modern, user-friendly website that reflects their innovative approach.</p>                    
-                                <div class="portfolio_card-tag">
-                                    <span class="tag">Figma</span>
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="image3" class="img">
-                        <div class="portfolio_row">
-                            <div class="portfolio_item-img-container flex-center">
-                                <img src="/assets/images/the-ivory-shift.png" class="portfolio_item-img" alt="Aetheris Project">
-                            </div>
-                            <div class="portfolio_description-container flex-center">
-                                <h3>The Ivory</h3>
-                                <p>Aetheris is a cutting-edge healthcare solutions platform revolutionizing the medicinal industry. 
-                                   We designed a modern, user-friendly website that reflects their innovative approach.</p>                    
-                                <div class="portfolio_card-tag">
-                                    <span class="tag">Figma</span>
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="image4" class="img">
-                        <div class="portfolio_row">
-                            <div class="portfolio_item-img-container flex-center">
-                                <img src="/assets/images/apex-roofing-shift.png" class="portfolio_item-img" alt="Aetheris Project">
-                            </div>
-                            <div class="portfolio_description-container flex-center">
-                                <h3>Apex Roofing</h3>
-                                <p>Aetheris is a cutting-edge healthcare solutions platform revolutionizing the medicinal industry. 
-                                   We designed a modern, user-friendly website that reflects their innovative approach.</p>                    
-                                <div class="portfolio_card-tag">
-                                    <span class="tag">Figma</span>
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- Navigation buttons -->
-                    <div class="nav-btn left nav-button" onclick="left()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </div>
-                    <div class="nav-btn right nav-button" onclick="right()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                
-                    <!-- Dots navigation -->
-                    <div class="dots">
-                        <div class="dot a1"></div>
-                        <div class="dot a2"></div>
-                        <div class="dot a3"></div>
-                        <div class="dot a4"></div>
-                    </div>
+                    <div class="portfolio_divider"></div>
+                    <h3>The Ivory</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis rerum praesentium temporibus optio soluta quidem nihil iusto ullam esse eligendi, nostrum veritatis. Provident modi ratione vitae sequi error, consequuntur laboriosam!</p>
                 </div>
-                <div class="portfolio_view-all-container flex-center">
-                    <a href="website-portfolio.html" class="view-all-btn">All Our Work</a>
+                <div class="portfolio_item">
+                    <div class="portfolio_img_container">
+                        <img src="assets/images/anna2-portfolio.png" class="portfolio_img" alt="">
+                    </div>
+                    <div class="portfolio_divider"></div>
+                    <h3>Anna Cordone Original</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis rerum praesentium temporibus optio soluta quidem nihil iusto ullam esse eligendi, nostrum veritatis. Provident modi ratione vitae sequi error, consequuntur laboriosam!</p>
                 </div>
-                
+            </div>
+            <div class="view-all-container flex-center">
+                <a href="website-portfolio.html" class="view-all-btn">All Our Work</a>
+            </div>
         </div>
     </section>
 
@@ -261,7 +215,7 @@
    
 
 
-    <section id="services" class="section section-alt pricing">
+    <section id="pricing" class="section section-alt pricing">
         <div class="container">
             <div class="section-header">
                 <h2>Our Pricing</h2>

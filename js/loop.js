@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Logo data - replace with your actual logos
     const logos = [
       { src: '/assets/images/paypal.png', alt: 'Company 1' },
-      { src: '/assets/images/master.png', alt: 'Company 2' },
+      { src: '/assets/images/mastercard.png', alt: 'Company 2' },
       { src: '/assets/images/aws.png', alt: 'Company 3' },
       { src: '/assets/images/slack.png', alt: 'Company 4' },
       { src: '/assets/images/github.png', alt: 'Company 6' },

@@ -64,7 +64,7 @@ img {
 /* Header & Navigation */
  .header {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     height: 80px;
@@ -75,6 +75,7 @@ img {
   
   .header.scrolled {
     background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
     backdrop-filter: blur(10px);
     padding: var(--spacing-4) 0;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
