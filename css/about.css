@@ -285,26 +285,26 @@
 .founder_name{
   color: white;
   font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .founder_title{
+  font-size: 1.3rem;
+  font-weight: 200;
   margin-bottom: 15px;
 }
 .founder_quote{
   font-size: 1rem;
-  color: #888;
+  font-weight: 200;
+  color: #cfcfcf;
   font-style: italic;
   margin-bottom: 1.3rem;
-  font-weight: 400;
 }
 .founder_quote span{
   color: #3b82f6;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 .founder_desc{
-  color: #888;
+  color: #d6d6d6;
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -350,9 +350,7 @@
       flex-direction: row;
     }
     
-    .team-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+ 
   }
   
   @media (min-width: 768px) {
@@ -374,6 +372,15 @@
       font-size: 3rem;
     }
   }
+  @media (max-width: 950px) {
+    .team-wrapper{
+      flex-direction: column-reverse;
+    }
+    .founder_image-container, .founder_info-container{
+      width: 100%;
+    }
+  }
+
   
   @media (min-width: 1024px) {
     .team-grid {
