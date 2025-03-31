@@ -11,15 +11,6 @@ html {
 	margin: 0;
 	box-sizing: border-box;
 }
-::-webkit-scrollbar{
-	height: 4px;
-	width: 4px;
-	background: gray;
-}
-::-webkit-scrollbar-thumb:horizontal{
-	background: #000;
-	border-radius: 10px;
-}
 
 input,
 button,
@@ -134,34 +125,6 @@ img {
 	}
 }
 
-/* Promo Box */
-.promo-box {
-	background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-	border-radius: 18px;
-	overflow: hidden;
-	padding: 40px;
-	color: #ffffff;
-}
-
-.promo-content h3 {
-	font-size: 28px;
-	font-weight: 600;
-	margin-bottom: 12px;
-}
-
-.promo-content p {
-	font-size: 17px;
-	opacity: 0.9;
-}
-
-input:focus-visible,
-textarea:focus-visible,
-.submit-button:focus-visible,
-.contact-link:focus-visible {
-	outline: 2px solid #0071e3;
-	outline-offset: 2px;
-}
-
 .logo-carousel-container {
 	width: 100%;
 	max-width: 100%;
@@ -246,7 +209,9 @@ textarea:focus-visible,
 	flex-direction: column;
 	flex: 1;
 }
-
+.home_text-container{
+	gap: 15px;
+}
 .home_title {
 	font-size: 4rem;
 	font-weight: 800;
@@ -310,9 +275,9 @@ textarea:focus-visible,
 	justify-content: center;
 }
 .about_video {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-	max-height: 80%;
+	max-height: 100%;
 }
 
 .about_text-container div h2{
@@ -368,6 +333,9 @@ textarea:focus-visible,
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+	background-color: #3e3e3e45;
+	padding: 20px;
+	border-radius: 12px;
 }
 .about_stat-card img{
 	max-height: 30px;
@@ -594,6 +562,7 @@ textarea:focus-visible,
 }
 .services-title{
 	font-weight: 400;
+	font-size: 2.3rem;
 	margin-bottom: 30px;
 }
 .service_row{
@@ -897,6 +866,37 @@ font-weight: 400;
 	margin-bottom: 24px;
 }
 
+/* Promo Box */
+.promo-box {
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(150deg, rgba(0, 90, 180, 0.104) 40%, rgba(223, 237, 71, 0.2) 110%);
+	border-radius: 16px;
+	backdrop-filter: blur(5px);	border-radius: 18px;
+	overflow: hidden;
+	padding: 40px;
+	color: #ffffff;
+}
+
+.promo-content h3 {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.promo-content p {
+	font-size: 17px;
+	opacity: 0.9;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+.submit-button:focus-visible,
+.contact-link:focus-visible {
+	outline: 2px solid #0071e3;
+	outline-offset: 2px;
+}
+
 input,
 textarea {
 	width: 100%;
@@ -942,8 +942,11 @@ textarea:not(:placeholder-shown)~label {
 .contact_submit-btn {
 	display: inline-block;
 	padding: 12px 24px;
-	background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-	color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(150deg, rgba(135, 135, 135, 0.104) 40%, rgba(187, 185, 255, 0.2) 110%);
+	border-radius: 16px;
+	backdrop-filter: blur(5px);	color: #ffffff;
 	font-size: 17px;
 	font-weight: 400;
 	border: none;
@@ -1086,7 +1089,9 @@ textarea:not(:placeholder-shown)~label {
 	.service_description{
 		width: 100%;
 	}
-
+	.service_title{
+		width: 100%;
+	}
 	.service_title h2{
 		font-size: 1.5rem;
 		padding-right: 10px;
@@ -1239,6 +1244,11 @@ textarea:not(:placeholder-shown)~label {
 	.about_stats-container {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
+	}
+	.about_stat-img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.about_stat-card{
 		text-align: center;
