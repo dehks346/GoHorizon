@@ -203,8 +203,9 @@ p {
 .logo-item {
 	flex: 0 0 auto;
 	width: 150px;
-	height: 80px;
-	padding: 0 15px;
+	height: 70px;
+
+	padding: 5px 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -282,6 +283,11 @@ p {
 	background-color: #3e3e3e45;
 	padding: 20px;
 	border-radius: 12px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(150deg, rgba(135, 135, 135, 0.104) 40%, rgba(187, 185, 255, 0.2) 110%);
+	border-radius: 16px;
+	backdrop-filter: blur(5px);
+	transition: 0.3s ease-in-out;
 }
 .about_stat-card img{
 	max-height: 30px;
@@ -359,6 +365,7 @@ font-weight: 400;
     margin-bottom: 30px;
     transition: transform 0.3s ease-in-out;
     position: relative; /* Helps contain child elements */
+	cursor: pointer;
 }
 .portfolio_divider {
     background-color: #ffffff54;
@@ -387,11 +394,7 @@ font-weight: 400;
     width: 100%;
 }
 .portfolio_item:hover .portfolio_img {
-    transform: scale(1.15);
-}
-.portfolio_item:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
+    transform: scale(1.1);
 }
 .portfolio_title {
     text-align: center;
@@ -532,28 +535,24 @@ font-weight: 400;
 .pricing-btn:hover{
 	background-color: #ffffff00;
 	color: #ffffff;
-	border: 1px solid #ffffff;
 }
 .pricing-btn-starter {
     background: linear-gradient(150deg, rgba(255, 92, 92, 0.1) 40%, rgba(255, 174, 174, 0.4) 110%);
 }
 .pricing-btn-starter:hover {
     background: linear-gradient(150deg, rgba(255, 92, 92, 0.2) 40%, rgba(255, 174, 174, 0.6) 110%);
-    transform: translateY(-4px);
 }
 .pricing-btn-growth {
     background: linear-gradient(150deg, rgba(63, 94, 251, 0.1) 40%, rgba(252, 70, 107, 0.4) 110%);
 }
 .pricing-btn-growth:hover {
     background: linear-gradient(150deg, rgba(63, 94, 251, 0.2) 40%, rgba(252, 70, 107, 0.6) 110%);
-    transform: translateY(-4px);
 }
 .pricing-btn-enterprise {
     background: linear-gradient(150deg, rgba(0, 204, 255, 0.1) 40%, rgba(0, 179, 255, 0.4) 110%);
 }
 .pricing-btn-enterprise:hover {
     background: linear-gradient(150deg, rgba(0, 204, 255, 0.2) 40%, rgba(0, 179, 255, 0.6) 110%);
-    transform: translateY(-4px);
 }
 .check-icon {
     display: inline-block;
@@ -818,6 +817,11 @@ textarea:not(:placeholder-shown)~label {
 		order: 1;
 		max-width: 80%;
 		max-height: 100%;
+	}
+
+	.logo-item {
+		width: 100px;
+		height: 50px;
 	}
 
 	.about_text-container div h2 {
