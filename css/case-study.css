@@ -105,6 +105,7 @@ p {
 	backdrop-filter: blur(5px);
     padding: 10px 20px;
     text-align: center;
+    border: 1px solid #ffffff;
 }
 .title-container h2{
     font-size: 84px;
@@ -162,18 +163,21 @@ p {
 
 .cta-btn {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(150deg, rgba(135, 135, 135, 0.104) 40%, rgba(187, 185, 255, 0.2) 110%);
+    background: rgb(135, 135, 135, 0.104);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     color: #ffffff;
     padding: 15px 30px;
-    border: 1px solid rgb(187, 195, 255);
+    border: 1px solid rgb(255, 255, 255);
     height: auto;
     width: auto;
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
-
+.cta-btn:hover{
+    background-color: rgb(187, 185, 255, 0.2);
+}
 
 @media (max-width: 768px) {
     .title h2{
