@@ -720,9 +720,9 @@ textarea:not(:placeholder-shown)~label {
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	margin-top: 16px;
+	cursor: pointer;
 }
 .contact_submit-btn:hover {
-	background-color: #0077ed;
 	transform: translateY(-3px);
 }
 .contact_submit-btn:active {
