@@ -393,6 +393,28 @@ font-weight: 400;
     display: block;
     width: 100%;
 }
+
+/* Homepage featured projects only: two equal columns, square thumbnails */
+.portfolio_grid--home {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 15px;
+	align-items: start;
+}
+.portfolio_grid--home > a {
+	display: block;
+	min-width: 0;
+}
+.portfolio_grid--home .portfolio_img_container {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+}
+.portfolio_grid--home .portfolio_img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .portfolio_item:hover .portfolio_img {
     transform: scale(1.1);
 }
@@ -871,6 +893,9 @@ textarea:not(:placeholder-shown)~label {
 
 	.portfolio_grid{
 		flex-direction: column;
+	}
+	.portfolio_grid--home {
+		grid-template-columns: 1fr;
 	}
 	.about_stats-container {
 		display: grid;

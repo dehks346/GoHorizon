@@ -84,11 +84,14 @@ p {
 }
 /* case study title section*/
 .title-container{
-    height: auto;
+    height: 500px;
     width: 100%;
     background-color: #121212;
     text-align: center;
     padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .title{
     display: flex;
@@ -104,7 +107,7 @@ p {
 	backdrop-filter: blur(5px);
     padding: 10px 20px;
     text-align: center;
-    border: 1px solid #ffffff;
+    border: 1px solid #ffffff79;
 }
 .title-container h2{
     font-size: 84px;
