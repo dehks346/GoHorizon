@@ -1,19 +1,22 @@
 RewriteEngine On
 
-# 1. Force non-www + HTTPS (first - most important to avoid loops)
-RewriteCond %{HTTP_HOST} ^www\.emmmscakes\.com [NC]
-RewriteRule ^(.*)$ https://emmmscakes.com/$1 [L,R=301]
-
-# 2. Force HTTPS (if someone visits with http)
+# 1. Force non-www + HTTPS (combined - prevents loops)
+RewriteCond %{HTTP_HOST} ^www\.gohorizon\.co\.uk [NC,OR]
 RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://gohorizon.co.uk%{REQUEST_URI} [L,R=301]
 
-# 3. Hide .html extension (clean URLs)
-# Serve .html files when requested without the extension
+# 2. Redirect /index.html and /index to clean homepage (THIS FIXES YOUR MAIN ISSUE)
+RewriteRule ^index\.html?$ / [R=301,L]
+
+# 3. Remove .html extension (clean URLs) + redirect if someone types .html
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Optional but recommended: Redirect if someone directly accesses .html (cleaner URLs)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+# 4. Optional: Force trailing slash on directories (recommended for consistency)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
